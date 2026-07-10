@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
 </head>
 <body>
-    <header>
-        <img src="../Multimedia/Img/Logo Celestial & Woods.png" alt="Logo Celestial & Woods" width="100" height="100">
-        <nav>
-            <ul>
-                <a href="../Index.html">Inicio</a> |
-                <a href="Paginas/Catalogo_Productos.html">Catalogo</a> |
-                <a href="Paginas/Guia_Fragancias.html">Guia de Fragancias</a> |
-                <a href="Paginas/Preguntas.html">Preguntas Frecuentes</a> |
-                <a href="Paginas/Sobre_Nosotros.html">Sobre Nosotros</a> |
-                <a href="#">Contacto</a>
+    <header class="main-header">
+        <div class="header-logo">
+            <a href="../Index.html">
+                <img src="../Multimedia/Img/Logo Celestial & Woods.png" alt="Logo Celestial & Woods" width="100" height="100">
+            </a>
+        </div>
+        
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../Index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="Catalogo_Productos.html" class="nav-link">Catalogo</a></li>
+                <li class="nav-item"><a href="Guia_fragancias.html" class="nav-link">Guia de Fragancias</a></li>
+                <li class="nav-item"><a href="Preguntas.html" class="nav-link">Preguntas Frecuentes</a></li>
+                <li class="nav-item"><a href="Informacion.html" class="nav-link">Sobre Nosotros</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active">Contacto</a></li>
             </ul>
         </nav>
     </header>
     
-    <main>
-        <section id="contacto">
+    <main class="main-content">
+        <section class="contact-section">
             <h1>Contáctanos</h1>
             <h2>Estamos para ayudarte.</h2>
 
@@ -46,53 +51,62 @@
             </div>
             
             <div class="contact-info">
-                <ul>
-                    <img src="../Multimedia/Img/Facebook Icon.png" alt="Logo de Facebook" width="50" height="50">
-                    <img src="../Multimedia/Img/Instagram Icon.png" alt="Logo de Instagram" width="50" height="50">
-                    <img src="../Multimedia/Img/Tiktok Icon.png" alt="Logo de TikTok" width="50" height="50">
+                <ul class="socials-list">
+                    <li class="socials-item">
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="../Multimedia/Img/Facebook Icon.png" alt="Logo de Facebook" width="50" height="50">
+                        </a>
+                    </li>
+                    
+                    <li class="socials-item">
+                        <a href="https://instagram.com" target="_blank">
+                            <img src="../Multimedia/Img/Instagram Icon.png" alt="Logo de instagram" width="50" height="50">
+                        </a>
+                    </li>
+
+                    <li class="socials-item">
+                        <a href="https://tiktok.com" target="_blank">
+                            <img src="../Multimedia/Img/Tiktok Icon.png" alt="Logo de TikTok" width="50" height="50">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <section>
-            <form>
-                <table width="500" border="2">
-                    <tr>
-                        <td>Nombre: </td>
-                        <td><input type="text" name="nombre" value="" size="40" maxlength="20"></td>
-                    </tr>
+        <section class="contact-form-section">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" maxlength="20">
+                </div>
 
-                    <tr>
-                        <td>Correo Electrónico: </td>
-                        <td><input type="email" name="email" value="" size="40" maxlength="100"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico: </label>
+                    <input type="email" id="email" name="email" maxlength="100">
+                </div>
 
-                    <tr>
-                        <td>Asunto: </td>
-                        <td><input type="text" name="subject" value="" size="40" maxlength="100"></td>
-                    </tr>
+                <div class="form-group">
+                    <label for="subject">Asunto: </label>
+                    <input type="text" id="subject" name="subject" maxlength="100">
+                </div>
 
-                    <tr>
-                        <td>Mensaje: </td>
-                        <td><textarea name="message" rows="5" cols="36"></textarea></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <button type="submit" style="width: 200px;">
-                                <img src="../Multimedia/Img/Send Icon.png" alt="Logo de Enviar" width="16" height="16"> 
-                                Enviar Mensaje
-                            </button>
-                        </td>
-                    </tr>
-                    
-                </table>
+                <div class="form-group">
+                    <label for="message">Mensaje: </label>
+                    <textarea id="message" name="message" rows="5" ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-button">
+                        <img src="../Multimedia/Img/Send Icon.png" alt="Logo de Enviar" width="16" height="16"> 
+                        Enviar Mensaje
+                    </button>
+                </div>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 CELESTIAL & WOODS. Todos los derechos reservados.     |   Términos y condiciones  |   Políticas de privacidad</p>
+    <footer class="main-footer">
+        <p class="footer-text">&copy; 2026 Celestials & Woods. Todos los derechos reservados.  &vert; Terminos y condiciones  &vert; Política de Privacidad</p>
     </footer>
 </body>
 </html>
