@@ -6,7 +6,12 @@
     <title>Detalle de producto</title>
 </head>
 <body>
-
+    <header class="main-header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="Multimedia/img/Logo Celestial & Woods.png" alt="Logo Celestial & Woods">
+            </a>
+        </div>
     <nav class="header-nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="../Index.html" class="nav-link">Inicio</a></li>
@@ -17,6 +22,52 @@
                 <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
-    
+    </header>
+    <main class="main-content">
+                <nav class="breadcrumb">
+            <a href="../Index.html" class="breadcrumb-link">Inicio</a>
+            <span class="breadcrumb-separator">&gt;</span>
+            <a href="Catalogo_Productos.html" class="breadcrumb-link">Catalogo</a>
+            <span class="breadcrumb-separator">&gt;</span>
+            <span class="breadcrumb-current">Sauvage</span>
+        </nav>
+
+        <section class="search-section">
+            <form class="search-form" action="Catalogo_Productos.html" method="get">
+                <label for="search">Buscar:</label>
+                <input type="text" id="search" name="search" placeholder="Buscar productos..." maxlength="100">
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+        </section>
+
+        <section class="product-detail">
+            <div class="product-gallery">
+                <img src="../Multimedia/Img/Sauvage 2.jpg" alt="Miniatura 1 del producto" width="100" height="100" class="gallery-thumbnail">
+                <img src="../Multimedia/Img/Sauvage 3.jpg" alt="Miniatura 2 del producto" width="100" height="100" class="gallery-thumbnail">
+            </div>
+            <div class="product-main-image">
+                <img src="../Multimedia/Img/Sauvage.jpeg" alt="Imagen principal del producto" width="300" height="400">
+            </div>
+            <div class="product-info">
+                <h1 class="product-name">Sauvage Eau de Toilette, de Christian Dior</h1>
+                <p class="product-price">₡100.000 I.V.A.I</p>
+                <p class="product-description">Perfil de uso:
+                    Pensada para hombres libres, modernos y decididos, es ideal para uso diario durante todo el año, con buena duración y una estela reconocible. Es uno de los perfumes masculinos más vendidos del mundo, aunque genera opiniones divididas: para muchos es un clásico "todo terreno", mientras que otros lo consideran demasiado simple frente a otras creaciones de Dior.
+                </p>
+                <div class="whatsapp-contact">
+                    <img src="../Multimedia/Img/Whatsapp Icon.png" alt="Logo de WhatsApp" width="30" height="30">
+                    <p>Para mas información: <br> +506 6039 1808</p>
+                </div>
+            </div>
+        </section>
+                <section class="product-description">
+            <p>
+                La fuerte ráfaga cítrica de Sauvage Eau de Toilette está potentemente anclada por la nobleza ambarina del ambroxán, el elemí resinoso y las maderas. La fragancia se presenta como radicalmente fresca, cruda y noble a la vez, con una composición donde predominan ingredientes naturales cuidadosamente seleccionados.
+            </p>
+        </section>
+    </main>
+        <footer class="main-footer">
+        <p class="footer-text">&copy; 2026 CELESTIAL & WOODS. Todos los derechos reservados. &vert; Términos y condiciones &vert; Políticas de privacidad</p>
+    </footer>
 </body>
 </html>
