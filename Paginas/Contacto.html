@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Contacto Perfumes</title>
+    <meta name="author" content="Ana María Faerron, Michael Maroto, Julian Rodríguez ">
+    <meta name="description" content="Ponte en contacto con Celestial & Woods. Estamos disponibles para responder tus consultas 
+        sobre perfumes, pedidos, envíos y recomendaciones de fragancias.">
+    <meta name="keywords" content="Celestial & Woods, contacto, atención al cliente, perfumes Costa Rica, consultas, pedidos, envíos, WhatsApp, servicio al cliente, fragancias">
+    <title> Contacto | Celestial & Woods </title>
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-logo">
+    <header class="main-header"> <!--Encabezado principal de la página que contiene elementos como el logo, el menú de navegación y otros componentes. La clase "main-header" permite aplicar estilos CSS y organizar su diseño.-->
+
+        <div class="header-logo">  <!--Contenedor del logotipo ubicado en el encabezado de la página. La clase "header-logo" permite aplicar estilos CSS o manipular este elemento con JavaScript. -->
             <a href="../Index.html">
                 <img src="../Multimedia/Img/Logo_Celestial_Woods.png" alt="Logo Celestial & Woods" width="100" height="100">
             </a>
         </div>
+
         
-        <nav class="header-nav">
-            <ul class="nav-list">
+        
+        <nav class="header-nav"> <!-- Nav es para el Menú de navegación principal del sitio. La clase "header-nav" se utiliza para 
+        aplicar estilos al contenedor del menú, como su posición, distribución, color de fondo o espaciado. -->
+
+            <ul class="nav-list"> <!-- Lista que agrupa todas las opciones de navegación. La clase "nav-list" permite organizar los elementos de la lista,
+                por ejemplo, mostrarlos en fila y eliminar las viñetas predeterminadas. -->
                 <li class="nav-item"><a href="../Index.html" class="nav-link">Inicio</a></li>
                 <li class="nav-item"><a href="Catalogo_Productos.html" class="nav-link">Catálogo</a></li>
                 <li class="nav-item"><a href="Guia_fragancias.html" class="nav-link">Guía de Fragancias</a></li>
@@ -22,27 +32,32 @@
                 <li class="nav-item"><a href="Informacion.html" class="nav-link">Sobre Nosotros</a></li>
                 <li class="nav-item"><a href="#" class="nav-link active">Contacto</a></li>
             </ul>
+            <!--La clase "nav-item" se utiliza para controlar el espaciado,
+            márgenes y la distribución de cada opción dentro del menú por eso se utiliza. -->
         </nav>
     </header>
     
-    <main class="main-content">
+    <main class="main-content"> <!--Aquí la clase también es para usar CSS o JavaScript-->
 
-        <nav class="breadcrumb">
-            <a href="../Index.html" class="breadcrumb-link">Inicio</a>
-            <span class="breadcrumb-separator">&gt;</span>
-            <span class="breadcrumb-current">Contacto</span>
+        <nav class="breadcrumb"> <!--Esto se llama un breadcrumb y es como un miní menú que muestra la página inicial y la página donde estoy-->
+            <a href="../Index.html" class="breadcrumb-link">Inicio</a> <!--Aquí es para conectar o hacer un link con la página de inicio-->
+            <span class="breadcrumb-separator">&gt;</span> <!--Muestra el símbolo ">" para separar las páginas en la ruta de navegación.
+            La clase "breadcrumb-separator" permite darle estilo al separador. -->
+            <span class="breadcrumb-current">Contacto</span> <!--Muestra la página donde estoy-->
         </nav>
         
-        <section class="contact-section">
+        <section class="contact-section"> <!--Aquí la clase también es para usar CSS o JavaScript-->
             <h1>Contáctanos</h1>
             <h2>Estamos para ayudarte.</h2>
 
-            <div class="contact-info">
+            <!--En vez de div podemos usar un article o section y creo que es más recomendada-->
+
+            <div class="contact-info"> <!--Aquí la clase también es para usar CSS o JavaScript-->
                 <img src="../Multimedia/Img/Whatsapp Icon.png" alt="Logo de WhatsApp" width="50" height="50">
                 <p><b>WhatsApp:</b> <br>+506 xxxx xxxx</p>
             </div>
 
-            <div class="contact-info">
+            <div class="contact-info"> 
                 <img src="../Multimedia/Img/Telefono Black Image.png" alt="Logo de Teléfono" width="50" height="50">
                 <p><b>Teléfono:</b> <br>+506 xxxx xxxx</p>
             </div>
@@ -80,7 +95,7 @@
             </div>
         </section>
 
-        <section class="contact-form-section">
+        <section class="contact-form-section"> <!--Aquí la clase también es para usar CSS o JavaScript-->
             <form class="contact-form">
                 <div class="form-group">
                     <label for="nombre">Nombre: </label>
@@ -112,7 +127,7 @@
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer"> <!--Esto es el footer de la página, la class es para darle estilo con CSS y usar JavaScript-->
         <p class="footer-text">&copy; 2026 Celestials & Woods. Todos los derechos reservados.  &vert; Terminos y condiciones  &vert; Política de Privacidad</p>
     </footer>
 </body>
