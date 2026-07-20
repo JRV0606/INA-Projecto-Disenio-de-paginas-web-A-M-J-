@@ -10,16 +10,17 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="header-logo">
-            <a href="index.html">
+        <div class="header-logo">                                                                                     
+            <a href="../Index.html">
                 <img src="Multimedia/img/Logo Celestial & Woods.png" alt="Logo Celestial & Woods">
             </a>
         </div>
-    <nav class="header-nav">
+        <nav class="header-nav">
+            <!-- Menú de navegación -->
             <ul class="nav-list">
                 <li class="nav-item"><a href="../Index.html" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="Catalogo_Productos.html" class="nav-link">Catálogo</a></li>
-                <li class="nav-item"><a href="Guia_fragancias.html" class="nav-link">Guía de Fragancias</a></li>
+                <li class="nav-item"><a href="Catalogo_Productos.html" class="nav-link">Catalogo</a></li>
+                <li class="nav-item"><a href="Guia_fragancias.html" class="nav-link">Guia de Fragancias</a></li>
                 <li class="nav-item"><a href="Preguntas.html" class="nav-link">Preguntas Frecuentes</a></li>
                 <li class="nav-item"><a href="Informacion.html" class="nav-link">Sobre Nosotros</a></li>
                 <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
@@ -27,6 +28,7 @@
         </nav>
     </header>
     <main class="main-content">
+        <!-- Ruta de navegación (breadcrumb) -->
         <nav class="breadcrumb">
             <a href="../Index.html" class="breadcrumb-link">Inicio</a>
             <span class="breadcrumb-separator">&gt;</span>
@@ -35,6 +37,7 @@
             <span class="breadcrumb-current">Sauvage</span>
         </nav>
 
+        <!-- Buscador que redirige al catálogo -->
         <section class="search-section">
             <form class="search-form" action="Catalogo_Productos.html" method="get">
                 <label for="search">Buscar:</label>
@@ -43,14 +46,18 @@
             </form>
         </section>
 
+        <!-- Sección principal con la información del producto -->
         <section class="product-detail">
+            <!-- Miniaturas  -->
             <div class="product-gallery">
                 <img src="../Multimedia/Img/Sauvage 2.jpg" alt="Miniatura 1 del producto" width="100" height="100" class="gallery-thumbnail">
                 <img src="../Multimedia/Img/Sauvage 3.jpg" alt="Miniatura 2 del producto" width="100" height="100" class="gallery-thumbnail">
             </div>
+            <!-- Imagen principal del producto -->
             <div class="product-main-image">
                 <img src="../Multimedia/Img/Sauvage.jpeg" alt="Imagen principal del producto" width="300" height="400">
             </div>
+            <!-- Nombre, precio, descripción de uso y contacto por WhatsApp -->
             <div class="product-info">
                 <h1 class="product-name">Sauvage Eau de Toilette, de Christian Dior</h1>
                 <p class="product-price">₡100.000 I.V.A.I</p>
@@ -59,17 +66,21 @@
                 </p>
                 <div class="whatsapp-contact">
                     <img src="../Multimedia/Img/Whatsapp Icon.png" alt="Logo de WhatsApp" width="30" height="30">
-                    <p>Para mas información sobre compra o producto: <br> +506 6039 1808</p>
+                    <p>Para mas información: <br> +506 6039 1808</p>
                 </div>
             </div>
         </section>
-                <section class="product-description">
+
+        <!-- Descripción del producto -->
+        <section class="product-description">
             <p>
                 La fuerte ráfaga cítrica de Sauvage Eau de Toilette está potentemente anclada por la nobleza ambarina del ambroxán, el elemí resinoso y las maderas. La fragancia se presenta como radicalmente fresca, cruda y noble a la vez, con una composición donde predominan ingredientes naturales cuidadosamente seleccionados.
             </p>
         </section>
     </main>
-        <footer class="main-footer">
+
+    <!-- Pie de página -->
+    <footer class="main-footer">
         <p class="footer-text">&copy; 2026 CELESTIAL & WOODS. Todos los derechos reservados. &vert; Términos y condiciones &vert; Políticas de privacidad</p>
     </footer>
 </body>
