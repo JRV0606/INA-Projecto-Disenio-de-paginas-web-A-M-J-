@@ -10,16 +10,21 @@
 </head>
 <body>
     <header class="main-header">
+        <!-- Logo de la marca-->
         <div class="header-logo">
             <a href="../Index.html">
                 <img src="../Multimedia/Img/Logo_Celestial_Woods.png" alt="Logo Celestial & Woods" width="100" height="100">
             </a>
         </div>
         
+        <!-- Menú de navegación-->
         <nav class="header-nav">
             <ul class="nav-list">
                 <li class="nav-item"><a href="../Index.html" class="nav-link">Inicio</a></li>
+
+                <!-- Enlace activo (Página actual)-->
                 <li class="nav-item"><a href="#" class="nav-link active">Catálogo</a></li>
+
                 <li class="nav-item"><a href="Guia_fragancias.html" class="nav-link">Guía de Fragancias</a></li>
                 <li class="nav-item"><a href="Preguntas.html" class="nav-link">Preguntas Frecuentes</a></li>
                 <li class="nav-item"><a href="Informacion.html" class="nav-link">Sobre Nosotros</a></li>
@@ -29,12 +34,14 @@
     </header>
     <main class="main-content">
 
+        <!-- Breadcrumbs-->
         <nav class="breadcrumb">
             <a href="../Index.html" class="breadcrumb-link">Inicio</a>
             <span class="breadcrumb-separator">&gt;</span>
             <span class="breadcrumb-current">Catálogo Productos</span>
         </nav>
 
+        <!-- Barra de búsqueda del catálogo-->
         <section class="catalog-header">
             <div class="catalog">
                 <h1>Catálogo de Productos</h1>
@@ -43,13 +50,18 @@
             </div>
         </section>
 
+        <!-- Sección de filtros-->
         <section class="filter-section">
             <h2>Filtrar por:</h2>
+
+            <!-- Filtro de rango de precio -->
             <div class="filter-options">
                 <label for="price-range"><strong>Precio:</strong></label>
                 <input type="number" class="filtro-precio" data-tipo="min" value="1">
                 <input type="number" class="filtro-precio" data-tipo="max" value="1000">
             </div>
+
+            <!-- Filtro por tipo de producto-->
             <div class="filter-options">
                 <p class="category"><strong>Tipos:</strong></p>
                 
@@ -63,6 +75,7 @@
                 <label for="elixires">Elixires</label>
             </div>
 
+            <!-- Filtro por marcas comerciales -->
             <div class="filter-options">
                 <p class="category"><strong>Marcas:</strong></p>
                 
@@ -83,9 +96,11 @@
             </div>
         </section>  
         
+        <!-- Sección de catálogo de productos-->
         <section class="product-catalog">
 
-            <div class="socials-item">
+            <!-- Tarjetas de productos-->
+            <div class="product-item">
                 <a href="Detalle_Producto.html" target="_blank">
                     <img src="../Multimedia/Img/Sauvage.jpeg" alt="Dior Sauvage" width="200" height="200">
                     <h2>Dior Sauvage</h2>
@@ -137,6 +152,7 @@
 
         </section>
 
+        <!-- Bloque de Paginación -->
         <div class="pagination-container">
             <nav id="paginacion" class="paginacion" aria-label="Paginación de productos">
                 <ul class="paginacion-lista">
@@ -162,6 +178,8 @@
                 </ul>
             </nav>
         </div>
+
+        <!-- Pie de página-->
         <footer class="main-footer">
             <p class="footer-text">&copy; 2026 Celestials & Woods. Todos los derechos reservados.  &vert; Terminos y condiciones  &vert; Política de Privacidad</p>
         </footer>
