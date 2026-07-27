@@ -24,43 +24,53 @@
     <link rel="stylesheet" href="../Css/DetalleProducto.css" />
     <link rel="stylesheet" href="../Css/Styles.css" />
     <title>Detalle Producto | Celestial & Woods</title>
+     <link href="../Css/Styles.css" rel="stylesheet"> <!--Se pone de último para que tenga prioridad-->
   </head>
   <body>
-    <header class="main-header">
-      <div class="header-logo">
-        <a href="../Index.html">
-          <img
-            src="Multimedia/img/Logo Celestial & Woods.png"
-            alt="Logo Celestial & Woods"
-          />
-        </a>
-      </div>
+    <!--MENU-->
+  <header class="main-header">
+
       <nav class="header-nav">
-        <!-- Menú de navegación -->
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="../Index.html" class="nav-link">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a href="Catalogo_Productos.html" class="nav-link">Catalogo</a>
-          </li>
-          <li class="nav-item">
-            <a href="Guia_fragancias.html" class="nav-link"
-              >Guia de Fragancias</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="Preguntas.html" class="nav-link">Preguntas Frecuentes</a>
-          </li>
-          <li class="nav-item">
-            <a href="Informacion.html" class="nav-link">Sobre Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a href="Contacto.html" class="nav-link">Contacto</a>
-          </li>
-        </ul>
+          <!-- Mitad izquierda del menú -->
+          <ul class="nav-list nav-list-mitad">
+              <li class="nav-item">
+                  <a href="../Index.html" class="nav-link">Inicio</a>
+              </li>
+              <!-- Enlace activo (Página actual) -->
+              <li class="nav-item">
+                  <a href="Paginas\Catalogo_Productos.html" class="nav-link active">Catálogo</a>
+              </li>
+              <li class="nav-item">
+                  <a href="Guia_fragancias.html" class="nav-link">Guía de Fragancias</a>
+              </li>
+          </ul>
+
+          <!-- Logo de la marca, centrado -->
+          <div class="header-logo">
+              <a href="../Index.html">
+                  <img
+                      src="../Multimedia/Img/Logo_Celestial_Woods.png"
+                      alt="Logo Celestial & Woods"
+                  />
+              </a>
+          </div>
+
+          <!-- Mitad derecha del menú -->
+          <ul class="nav-list nav-list-mitad">
+              <li class="nav-item">
+                  <a href="Preguntas.html" class="nav-link">Preguntas Frecuentes</a>
+              </li>
+              <li class="nav-item">
+                  <a href="Informacion.html" class="nav-link">Sobre Nosotros</a>
+              </li>
+              <li class="nav-item">
+                  <a href="Contacto.html" class="nav-link">Contacto</a>
+              </li>
+          </ul>
+
       </nav>
-    </header>
+  </header>
+
     <main class="main-content">
       <!-- Ruta de navegación (breadcrumb) -->
       <nav class="breadcrumb">
