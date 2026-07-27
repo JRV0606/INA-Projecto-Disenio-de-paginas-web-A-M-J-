@@ -1,188 +1,354 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Ana María Faerron, Michael Maroto, Julian Rodríguez ">
-    <meta name="description" content="Explora nuestro catálogo de perfumes para hombre, mujer y unisex.">
-    <meta name="keywords" content="perfumes, catálogo de perfumes, fragancias, perfumes para hombre, perfumes para mujer, perfumes unisex, aromas, notas olfativas, perfumes originales, perfumes de diseñador, perfumes de nicho, fragancias florales, fragancias cítricas, fragancias amaderadas, fragancias orientales, perfumes dulces">
-    <title> Catálogo Productos | Celestial & Woods </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Ana María Faerron, Michael Maroto, Julian Rodríguez "
+    />
+    <meta
+      name="description"
+      content="Explora nuestro catálogo de perfumes para hombre, mujer y unisex."
+    />
+    <meta
+      name="keywords"
+      content="perfumes, catálogo de perfumes, fragancias, perfumes para hombre, perfumes para mujer, perfumes unisex, aromas, notas olfativas, perfumes originales, perfumes de diseñador, perfumes de nicho, fragancias florales, fragancias cítricas, fragancias amaderadas, fragancias orientales, perfumes dulces"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Catálogo Productos | Celestial & Woods</title>
+  </head>
+  <body>
     <header class="main-header">
-        <!-- Logo de la marca-->
-        <div class="header-logo">
-            <a href="../Index.html">
-                <img src="../Multimedia/Img/Logo_Celestial_Woods.png" alt="Logo Celestial & Woods" width="100" height="100">
-            </a>
-        </div>
-        
-        <!-- Menú de navegación-->
-        <nav class="header-nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="../Index.html" class="nav-link">Inicio</a></li>
+      <!-- Logo de la marca-->
+      <div class="header-logo">
+        <a href="../Index.html">
+          <img
+            src="../Multimedia/Img/Logo_Celestial_Woods.png"
+            alt="Logo Celestial & Woods"
+            width="100"
+            height="100"
+          />
+        </a>
+      </div>
 
-                <!-- Enlace activo (Página actual)-->
-                <li class="nav-item"><a href="#" class="nav-link active">Catálogo</a></li>
+      <!-- Menú de navegación-->
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../Index.html" class="nav-link">Inicio</a>
+          </li>
 
-                <li class="nav-item"><a href="Guia_fragancias.html" class="nav-link">Guía de Fragancias</a></li>
-                <li class="nav-item"><a href="Preguntas.html" class="nav-link">Preguntas Frecuentes</a></li>
-                <li class="nav-item"><a href="Informacion.html" class="nav-link">Sobre Nosotros</a></li>
-                <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
-            </ul>
-        </nav>
+          <!-- Enlace activo (Página actual)-->
+          <li class="nav-item">
+            <a href="#" class="nav-link active">Catálogo</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Guia_fragancias.html" class="nav-link"
+              >Guía de Fragancias</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="Preguntas.html" class="nav-link">Preguntas Frecuentes</a>
+          </li>
+          <li class="nav-item">
+            <a href="Informacion.html" class="nav-link">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a href="Contacto.html" class="nav-link">Contacto</a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="main-content">
+      <!-- Breadcrumbs-->
+      <nav class="breadcrumb">
+        <a href="../Index.html" class="breadcrumb-link">Inicio</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span class="breadcrumb-current">Catálogo Productos</span>
+      </nav>
 
-        <!-- Breadcrumbs-->
-        <nav class="breadcrumb">
-            <a href="../Index.html" class="breadcrumb-link">Inicio</a>
-            <span class="breadcrumb-separator">&gt;</span>
-            <span class="breadcrumb-current">Catálogo Productos</span>
-        </nav>
+      <!-- Barra de búsqueda del catálogo-->
+      <section class="catalog-header">
+        <div class="catalog">
+          <h1>Catálogo de Productos</h1>
+          <label for="search">Buscar:</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="Buscar productos..."
+            maxlength="100"
+          />
+        </div>
+      </section>
 
-        <!-- Barra de búsqueda del catálogo-->
-        <section class="catalog-header">
-            <div class="catalog">
-                <h1>Catálogo de Productos</h1>
-                <label for="search">Buscar:</label>
-                <input type="text" id="search" placeholder="Buscar productos..." maxlength="100">
-            </div>
-        </section>
+      <!-- Sección de filtros-->
+      <section class="filter-section">
+        <h2>Filtrar por:</h2>
 
-        <!-- Sección de filtros-->
-        <section class="filter-section">
-            <h2>Filtrar por:</h2>
-
-            <!-- Filtro de rango de precio -->
-            <div class="filter-options">
-                <label for="price-range"><strong>Precio:</strong></label>
-                <input type="number" class="filtro-precio" data-tipo="min" value="1">
-                <input type="number" class="filtro-precio" data-tipo="max" value="1000">
-            </div>
-
-            <!-- Filtro por tipo de producto-->
-            <div class="filter-options">
-                <p class="category"><strong>Tipos:</strong></p>
-                
-                <input class="filter-checkbox" type="checkbox" id="todas" value="todas">
-                <label for="todas">Todas</label>
-                <input class="filter-checkbox" type="checkbox" id="perfumes" value="perfumes">
-                <label for="perfumes">Perfumes</label>
-                <input class="filter-checkbox" type="checkbox" id="colonias" value="colonias">
-                <label for="colonias">Colonias</label>
-                <input class="filter-checkbox" type="checkbox" id="elixires" value="elixires">
-                <label for="elixires">Elixires</label>
-            </div>
-
-            <!-- Filtro por marcas comerciales -->
-            <div class="filter-options">
-                <p class="category"><strong>Marcas:</strong></p>
-                
-                <input class="filter-checkbox" type="checkbox" id="todas-marca" value="todas">
-                <label for="todas-marca">Todas</label>
-                <input class="filter-checkbox" type="checkbox" id="dior" value="dior">
-                <label for="dior">Dior</label>
-                <input class="filter-checkbox" type="checkbox" id="valentino" value="valentino">
-                <label for="valentino">Valentino</label>
-                <input class="filter-checkbox" type="checkbox" id="lattafa" value="lattafa">
-                <label for="lattafa">Lattafa</label>
-                <input class="filter-checkbox" type="checkbox" id="nueve-pm" value="nueve-pm">
-                <label for="nueve-pm">9pm</label>
-                <input class="filter-checkbox" type="checkbox" id="burberry" value="burberry">
-                <label for="burberry">Burberry</label>
-                <input class="filter-checkbox" type="checkbox" id="el-ganso" value="el-ganso">
-                <label for="el-ganso">El Ganso</label>
-            </div>
-        </section>  
-        
-        <!-- Sección de catálogo de productos-->
-        <section class="product-catalog">
-
-            <!-- Tarjetas de productos-->
-            <div class="product-item">
-                <a href="Detalle_Producto.html" target="_blank">
-                    <img src="../Multimedia/Img/Sauvage.jpeg" alt="Dior Sauvage" width="200" height="200">
-                    <h2>Dior Sauvage</h2>
-                </a>
-                <p>Precio: ₡100,000</p>
-            </div>
-
-            <div class="product-item">
-                <img src="../Multimedia/Img/Valentino.jpeg" alt="Valentino" width="200" height="200">
-                <h2>Valentino UOMO</h2>
-                <p>Precio: ₡30,000</p>
-            </div>
-
-            <div class="product-item">
-                <img src="../Multimedia/Img/Club de nuit.jpeg" alt="Club de nuit" width="200" height="200">
-                <h2>Club de nuit</h2>
-                <p>Precio: ₡25,000</p>
-            </div>
-            
-            <div class="product-item">
-                <img src="../Multimedia/Img/9pm black.jpeg" alt="9pm black" width="200" height="200">
-                <h2>9pm black</h2>
-                <p>Precio: ₡15,000</p>
-            </div>
-
-            <div class="product-item">
-                <img src="../Multimedia/Img/Versace.jpeg" alt="Versace" width="200" height="200">
-                <h2>Versace Eros</h2>
-                <p>Precio: ₡20,000</p>
-            </div>
-
-            <div class="product-item">
-                <img src="../Multimedia/Img/Khamban.jpeg" alt="Khamban" width="200" height="200">
-                <h2>Khamban Lattafa</h2>
-                <p>Precio: ₡22,000</p>
-            </div>
-
-            <div class="product-item">
-                <img src="../Multimedia/Img/Hawas.jpeg" alt="Hawas" width="200" height="200">
-                <h2>Hawas</h2>
-                <p>Precio: ₡15,000</p>
-            </div>
-
-            <div class="product-item">
-                <img src="../Multimedia/Img/Odyssey.jpeg" alt="Odyssey" width="200" height="200">
-                <h2>Odyssey</h2>
-                <p>Precio: ₡30,000</p>
-            </div>
-
-        </section>
-
-        <!-- Bloque de Paginación -->
-        <div class="pagination-container">
-            <nav id="paginacion" class="paginacion" aria-label="Paginación de productos">
-                <ul class="paginacion-lista">
-                    <li>
-                        <button type="button" id="btn-pagina-anterior" aria-label="Página anterior">&lt;</button>
-                    </li>
-            
-                    <li>
-                        <button type="button" class="btn-pagina pagina-activa" data-page="1">1</button>
-                    </li>
-            
-                    <li>
-                        <button type="button" class="btn-pagina" data-page="2">2</button>
-                    </li>
-            
-                    <li>
-                        <button type="button" class="btn-pagina" data-page="3">3</button>
-                    </li>
-            
-                    <li>
-                        <button type="button" id="btn-pagina-siguiente" aria-label="Página siguiente">&gt;</button>
-                    </li>
-                </ul>
-            </nav>
+        <!-- Filtro de rango de precio -->
+        <div class="filter-options">
+          <label for="price-range"><strong>Precio:</strong></label>
+          <input
+            type="number"
+            class="filtro-precio"
+            data-tipo="min"
+            value="1"
+          />
+          <input
+            type="number"
+            class="filtro-precio"
+            data-tipo="max"
+            value="1000"
+          />
         </div>
 
-        <!-- Pie de página-->
-        <footer class="main-footer">
-            <p class="footer-text">&copy; 2026 Celestials & Woods. Todos los derechos reservados.  &vert; Terminos y condiciones  &vert; Política de Privacidad</p>
-        </footer>
+        <!-- Filtro por tipo de producto-->
+        <div class="filter-options">
+          <p class="category"><strong>Tipos:</strong></p>
+
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="todas"
+            value="todas"
+          />
+          <label for="todas">Todas</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="perfumes"
+            value="perfumes"
+          />
+          <label for="perfumes">Perfumes</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="colonias"
+            value="colonias"
+          />
+          <label for="colonias">Colonias</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="elixires"
+            value="elixires"
+          />
+          <label for="elixires">Elixires</label>
+        </div>
+
+        <!-- Filtro por marcas comerciales -->
+        <div class="filter-options">
+          <p class="category"><strong>Marcas:</strong></p>
+
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="todas-marca"
+            value="todas"
+          />
+          <label for="todas-marca">Todas</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="dior"
+            value="dior"
+          />
+          <label for="dior">Dior</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="valentino"
+            value="valentino"
+          />
+          <label for="valentino">Valentino</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="lattafa"
+            value="lattafa"
+          />
+          <label for="lattafa">Lattafa</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="nueve-pm"
+            value="nueve-pm"
+          />
+          <label for="nueve-pm">9pm</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="burberry"
+            value="burberry"
+          />
+          <label for="burberry">Burberry</label>
+          <input
+            class="filter-checkbox"
+            type="checkbox"
+            id="el-ganso"
+            value="el-ganso"
+          />
+          <label for="el-ganso">El Ganso</label>
+        </div>
+      </section>
+
+      <!-- Sección de catálogo de productos-->
+      <section class="product-catalog">
+        <!-- Tarjetas de productos-->
+        <div class="product-item">
+          <a href="Detalle_Producto.html" target="_blank">
+            <img
+              src="../Multimedia/Img/Sauvage.jpeg"
+              alt="Dior Sauvage"
+              width="200"
+              height="200"
+            />
+            <h2>Dior Sauvage</h2>
+          </a>
+          <p>Precio: ₡100,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Valentino.jpeg"
+            alt="Valentino"
+            width="200"
+            height="200"
+          />
+          <h2>Valentino UOMO</h2>
+          <p>Precio: ₡30,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Club de nuit.jpeg"
+            alt="Club de nuit"
+            width="200"
+            height="200"
+          />
+          <h2>Club de nuit</h2>
+          <p>Precio: ₡25,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/9pm black.jpeg"
+            alt="9pm black"
+            width="200"
+            height="200"
+          />
+          <h2>9pm black</h2>
+          <p>Precio: ₡15,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Versace.jpeg"
+            alt="Versace"
+            width="200"
+            height="200"
+          />
+          <h2>Versace Eros</h2>
+          <p>Precio: ₡20,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Khamban.jpeg"
+            alt="Khamban"
+            width="200"
+            height="200"
+          />
+          <h2>Khamban Lattafa</h2>
+          <p>Precio: ₡22,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Hawas.jpeg"
+            alt="Hawas"
+            width="200"
+            height="200"
+          />
+          <h2>Hawas</h2>
+          <p>Precio: ₡15,000</p>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="../Multimedia/Img/Odyssey.jpeg"
+            alt="Odyssey"
+            width="200"
+            height="200"
+          />
+          <h2>Odyssey</h2>
+          <p>Precio: ₡30,000</p>
+        </div>
+      </section>
+
+      <!-- Bloque de Paginación -->
+      <div class="pagination-container">
+        <nav
+          id="paginacion"
+          class="paginacion"
+          aria-label="Paginación de productos"
+        >
+          <ul class="paginacion-lista">
+            <li>
+              <button
+                type="button"
+                id="btn-pagina-anterior"
+                aria-label="Página anterior"
+              >
+                &lt;
+              </button>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                class="btn-pagina pagina-activa"
+                data-page="1"
+              >
+                1
+              </button>
+            </li>
+
+            <li>
+              <button type="button" class="btn-pagina" data-page="2">2</button>
+            </li>
+
+            <li>
+              <button type="button" class="btn-pagina" data-page="3">3</button>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                id="btn-pagina-siguiente"
+                aria-label="Página siguiente"
+              >
+                &gt;
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Pie de página-->
+      <footer class="main-footer">
+        <p class="footer-text">
+          &copy; 2026 Celestials & Woods. Todos los derechos reservados. &vert;
+          Terminos y condiciones &vert; Política de Privacidad
+        </p>
+      </footer>
     </main>
-</body>
+  </body>
 </html>
