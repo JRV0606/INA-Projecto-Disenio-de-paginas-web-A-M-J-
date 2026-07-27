@@ -21,6 +21,8 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../Css/DetalleProducto.css" />
+    <link rel="stylesheet" href="../Css/Styles.css" />
     <title>Detalle Producto | Celestial & Woods</title>
   </head>
   <body>
@@ -71,8 +73,8 @@
 
       <!-- Buscador que redirige al catálogo -->
       <section class="search-section">
+        <h3>Catalogo de productos</h3>
         <form class="search-form" action="Catalogo_Productos.html" method="get">
-          <label for="search">Buscar:</label>
           <input
             type="text"
             id="search"
@@ -87,7 +89,7 @@
       <!-- Sección principal con la información del producto -->
       <section class="product-detail">
         <!-- Miniaturas  -->
-        <div class="product-gallery">
+        <aside class="product-gallery">
           <img
             src="../Multimedia/Img/Sauvage 2.jpg"
             alt="Miniatura 1 del producto"
@@ -96,24 +98,24 @@
             class="gallery-thumbnail"
           />
           <img
-            src="../Multimedia/Img/Sauvage 3.jpg"
+            src="../Multimedia/Img/Sauvage 3.png"
             alt="Miniatura 2 del producto"
             width="100"
             height="100"
             class="gallery-thumbnail"
           />
-        </div>
+        </aside>
         <!-- Imagen principal del producto -->
         <div class="product-main-image">
           <img
-            src="../Multimedia/Img/Sauvage.jpeg"
+            src="../Multimedia/Img/Sauvage.png"
             alt="Imagen principal del producto"
             width="300"
             height="400"
           />
         </div>
         <!-- Nombre, precio, descripción de uso y contacto por WhatsApp -->
-        <div class="product-info">
+        <aside class="product-info">
           <h1 class="product-name">
             Sauvage Eau de Toilette, de Christian Dior
           </h1>
@@ -138,7 +140,7 @@
               +506 6039 1808
             </p>
           </div>
-        </div>
+        </aside>
       </section>
 
       <!-- Descripción del producto -->
