@@ -1,4 +1,79 @@
-p
-{
+
+/* ===========================
+    CONFIGURACIÓN GENERAL
+=========================== */
+
+/*Esto es para que aplique todo los formatos a todo el documento*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box; /* Hace que el ancho y el alto del elemento incluyan el padding y el borde, evitando que aumente su tamaño total. */
+    background-color: black;
+    color: white;
+}
+
+/*Esto es para que aplique esa función a todo el html*/
+html{
+    scroll-behavior:smooth; /* Desplaza la página de forma suave hacia una sección en lugar de saltar directamente. */ 
     
 }
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* ===================================
+    CONFIGURACIÓN  PARA EL MENÚ
+====================================== */
+
+/*Configuración para todos los headers*/
+
+.header-nav {
+    display: flex; /*Para poner todos los hijos al lado*/
+    align-items: center;
+    justify-content: center;
+    gap: 2.25rem; /*es el espacio en blanco que se deja entre elementos */
+    padding: 1.625rem 3.125rem;
+    background: black;
+}
+
+.nav-list {
+    display: flex;
+    gap: 0.375rem;
+    list-style: none;
+    margin: 0 ;
+    padding: 0;
+    font-family: 'Cormorant Garamond', sans-serif;
+}
+
+
+.header-logo img {
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-link { /*Este es lo link o a de del nav*/
+    color: white;
+    text-decoration: none; /*Para quitarle los puntos y raya*/
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    transition: background 0.25s ease, color 0.25s ease;
+    /* transition: background 0.25s ease, color 0.25s ease;
+    Hace que los cambios de "background" y "color" no ocurran de golpe,
+    sino de forma suave, en 0.25 segundos cada uno (como un desvanecido).
+    Aquí van DOS transiciones separadas por una coma: una para el background
+    y otra para el color, cada una con su propia duración y tipo de movimiento. */
+}
+
+.nav-link:hover { /*Cuando se pasa el mouse por los link del nav*/
+    background: #cba135;
+    color: white;
+}
+
+
