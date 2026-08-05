@@ -90,8 +90,6 @@ body{
   object-fit: cover;
 }
 
-
-
 .nav-link:hover {
   /*Cuando se pasa el mouse por los link del nav*/
   background: linear-gradient(
@@ -102,6 +100,10 @@ body{
     );
   color: black;
 }
+
+.nav-link:hover i{ /*cuando pasen el mouse por ahi tambien cambie de color los iconos*/
+    color: black;
+  }
 
 .hamburger-menu { /*Esto es para que no muestre el menu hamburguesa cuando está en escritorio*/
   display: none;
@@ -123,7 +125,10 @@ body{
     background-color: transparent;
     font-size: 1.5rem;
     border: none;
+  }
 
+  .hamburger-menu:hover{
+    transform: scale(1.15); /*cuando se presiona se hace más grande*/
   }
 
   /*El contenedor (header) */
@@ -141,7 +146,7 @@ body{
     right: 0;
     bottom: 0;
 
-    width: 230px;
+    width: 280px;
     height: 100vh;
 
     display: flex;
@@ -150,18 +155,30 @@ body{
     align-items: flex-start;
     
     padding: 1rem;
-    
   
-    background-color: #333;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+    180deg,
+    #3c3b3a 0%,
+    #2f2f2f 45%,
+    #232323 100%
+);
+    box-shadow:
+    -15px 0 40px rgba(0,0,0,.45),
+    0 0 0 100vmax rgba(0,0,0,.5);
+
+    border-radius: 40px 0 0 40px;
 
     /* Esto es para que no muestre el nav cuando está en mobile y pongo .nav-list para que si me muestre la imagen que también esta adentro del nav*/
     opacity: 0;
     visibility: hidden;
+
+    transform: translateX(100%);
+    transition: transform .35s ease;
   }
 
   /*Esto es para Java Script*/
   .header-nav.visible {
+    transform: translateX(0);
     opacity: 1;
     visibility: visible;
   }
@@ -174,44 +191,47 @@ body{
     margin: 0;   /* Espacio debajo de la X */
     padding: 0;
     width: 100%; /*significa que el elemento ocupa el 100% del ancho de su contenedor padre.*/
-    
-    
+  }
+
+  .nav-link:hover i{ /*cuando pasen el mouse por ahi tambien cambie de color los iconos*/
+    color: black;
   }
 
 /*Contenedor (li) Padre de los a*/
   .nav-item{
     margin: 0;
-    padding: 1rem 0;
+    width:100%;
+    padding:1rem 0;
     
   }
 
   /*Esta es la líneas del menu gris y le pongo el not para que al ultimo no le ponga*/
   .nav-item:not(:last-child){
-    border-bottom: 1px solid #8d7745;
+    border-bottom:1px solid rgba(203,161,53,.45);
 }
 
   /*Contenedor (a) para manejar lo que está dentro el texto. Padre de los textos*/
   .nav-link {
-    color: white;
+    color: #d4b483;
     text-decoration: none; /*Para quitarle los puntos y raya*/
     font-size: 1.2rem;
     font-weight: 1000;
     padding: 0.8rem 0;
     white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
-    
+    transition: .3s;
   }
 
   .nav-link:hover {
   /*Cuando se pasa el mouse por los link del nav*/
-  background: none;
-  color: #cba135;
+    background: none;
+    color: #f6deb0;
+    padding-left:12px;
   }
 
+  .nav-link:hover i{ /*cuando pasen el mouse por ahi tambien cambie de color los iconos*/
+    color: #f6deb0;
+  }
 
-  /*Contenedor del logo*/
-  /* .header-logo img {
-    margin-right: auto;
-  } */
 
   /*logo*/
   .header-logo img {
@@ -223,12 +243,21 @@ body{
     background-color: transparent;
     margin: 0;
     border: 0;
-    font-size: 1.50rem;
+    font-size: 2rem;
     align-self: flex-end;
     cursor: pointer;
 
     display: block;  /*Esto es para que muestre el menu hamburguesa cuando está en mobile*/
   }
 
+  .cerrar-menu:hover{
+    color:white;
+    transform:rotate(90deg);
+  }
+
+  .bi-house-door, .fa-solid, .bi-question-circle, .bi-person, .bi-envelope {
+    color: #d4b483;
+    font-size: 1.2rem;
+  }
 
 }
