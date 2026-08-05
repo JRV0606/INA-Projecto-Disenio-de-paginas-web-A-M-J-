@@ -22,51 +22,38 @@
       rel="stylesheet"
     />
     <title>Guía de Fragancias | Celestial & Woods</title>
+    <link href="../Css/Styles.css" rel="stylesheet"> <!--Se pone de último para que tenga prioridad-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!--Para usar bootstrap (iconos)-->
   </head>
 
   <body>
     <header>
-      <!--Cabecera de la página, contiene logo, nombre de la empresa, título principal, menú-->
-      <div class="header-logo">
-        <!--Contenedor del logotipo ubicado en el encabezado de la página. La clase "header-logo" permite aplicar estilos CSS o manipular este elemento con JavaScript. -->
-        <a href="../Index.html">
-          <img
-            src="../Multimedia/Img/Logo_Celestial_Woods.png"
-            alt="Logo Celestial & Woods"
-            width="100"
-            height="100"
-          />
-        </a>
-      </div>
+      <!-- Logo de la marca, centrado -->
+        <div class="header-logo">
+            <a href="../Index.html">
+                <img
+                    src="../Multimedia/Img/Logo_Celestial_Woods.png"
+                    alt="Logo Celestial & Woods"
+                />
+            </a>
+        </div>
 
-      <nav class="header-nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="../Index.html" class="nav-link">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a href="Catalogo_Productos.html" class="nav-link">Catálogo</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link active">Guía de Fragancias</a>
-          </li>
-          <li class="nav-item">
-            <a href="Preguntas.html" class="nav-link">Preguntas Frecuentes</a>
-          </li>
-          <li class="nav-item">
-            <a href="Informacion.html" class="nav-link">Sobre Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a href="Contacto.html" class="nav-link">Contacto</a>
-          </li>
-        </ul>
-      </nav>
+        <button class="hamburger-menu" id="abrir"><i class="bi bi-list"></i></button>
 
-      <nav class="breadcrumb">
-        <a href="../Index.html" class="breadcrumb-link">Inicio</a>
-        <span class="breadcrumb-separator">&gt;</span>
-        <span class="breadcrumb-current">Guía Fragancias</span>
-      </nav>
+        <nav class="header-nav" id="nav">
+
+          <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+
+          <ul class="nav-list">
+              <li class="nav-item"> <a href="../Index.html" class="nav-link">Inicio</a></li>
+              <li class="nav-item"> <a href="../Paginas/Catalogo_Productos.html" class="nav-link">Catálogo</a></li>
+              <li class="nav-item"> <a href="#" class="nav-link active">Guía de Fragancias</a> </li>
+              <li class="nav-item"> <a href="../Paginas/Preguntas.html" class="nav-link">Preguntas Frecuentes</a> </li>
+              <li class="nav-item"> <a href="../Paginas/Informacion.html" class="nav-link">Quienes somos</a></li>
+              <li class="nav-item"> <a href="../Paginas/Contacto.html" class="nav-link">Contacto</a> </li>
+          </ul>
+
+        </nav>
 
       <h1>Guía de Fragancias</h1>
       <p>
@@ -77,6 +64,12 @@
     </header>
 
     <main>
+      
+      <nav class="breadcrumb">
+        <a href="../Index.html" class="breadcrumb-link">Inicio</a>
+        <span class="breadcrumb-separator">&gt;</span>
+        <span class="breadcrumb-current">Guía Fragancias</span>
+      </nav>
       <!-- Aquí se explica los Beneficios-->
       <section>
         <h2>¿POR QUÉ ESTA GUÍA ES ÚTIL PARA TI?</h2>
@@ -546,5 +539,6 @@
         Terminos y condiciones &vert; Política de Privacidad
       </p>
     </footer>
+    <script src="../Java/main.js"></script> <!--Se pone al final porque ocupa primero haber leido todo el html-->
   </body>
 </html>
