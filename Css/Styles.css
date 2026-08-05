@@ -1,43 +1,57 @@
-p {
-  /* ===========================
-    CONFIGURACIÓN GENERAL
-=========================== */
 
-  /*Esto es para que aplique todo los formatos a todo el documento*/
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Hace que el ancho y el alto del elemento incluyan el padding y el borde, evitando que aumente su tamaño total. */
-    background-color: black;
-    color: white;
-  }
+/* ==========================================================================
+    CONFIGURACIÓN  GENERAL
+============================================================================= */
 
-  /*Esto es para que aplique esa función a todo el html*/
-  html {
-    scroll-behavior: smooth; /* Desplaza la página de forma suave hacia una sección en lugar de saltar directamente. */
-  }
+/*Esto es para que aplique todo los formatos a todo el documento*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Hace que el ancho y el alto del elemento incluyan el padding y el borde, evitando que aumente su tamaño total. */
+  color: white;
+}
+
+/*Esto es para que aplique esa función a todo el html*/
+html {
+  scroll-behavior: smooth; /* Desplaza la página de forma suave hacia una sección en lugar de saltar directamente. */
 }
 
 main {
   width: 80%;
   margin: 0 auto;
+  
 }
 
-/* ===================================
-    CONFIGURACIÓN  PARA EL MENÚ
-====================================== */
+body{
+  background-color: black;
+}
+
+/* ==========================================================================
+    CONFIGURACIÓN  PARA EL MENÚ ESCRITORIO
+============================================================================= */
 
 /*Configuración para todos los headers*/
 
+/*El contenedor (header) */
+.main-header {
+  background: black;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+
+
+/*El el contenedor (nav)*/
 .header-nav {
   display: flex; /*Para poner todos los hijos al lado*/
   align-items: center;
   justify-content: center;
   gap: 2.25rem; /*es el espacio en blanco que se deja entre elementos */
   padding: 1.625rem 3.125rem;
-  background: black;
+  
 }
 
+/*Es el contenedor (ul)*/
 .nav-list {
   display: flex;
   gap: 0.375rem;
@@ -47,20 +61,14 @@ main {
   font-family: "Cormorant Garamond", sans-serif;
 }
 
-.header-logo img {
-  width: 12.5rem;
-  height: 12.5rem;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
+/*Es el contenedor (a) para manejar el texto dentro de los */
 .nav-link {
   /*Este es lo link o a de del nav*/
   color: white;
   text-decoration: none; /*Para quitarle los puntos y raya*/
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 1.25rem;
   transition:
     background 0.25s ease,
@@ -70,10 +78,157 @@ main {
     sino de forma suave, en 0.25 segundos cada uno (como un desvanecido).
     Aquí van DOS transiciones separadas por una coma: una para el background
     y otra para el color, cada una con su propia duración y tipo de movimiento. */
+  text-align: center;
+  white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
 }
+
+/*El logo */
+.header-logo img {
+  width: 10.5rem;
+  height: 10.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
 
 .nav-link:hover {
   /*Cuando se pasa el mouse por los link del nav*/
-  background: #cba135;
-  color: white;
+  background: linear-gradient(
+        90deg,
+        #8d6e2f,
+        #cba135,
+        #f2d27a
+    );
+  color: black;
+}
+
+.hamburger-menu { /*Esto es para que no muestre el menu hamburguesa cuando está en escritorio*/
+  display: none;
+}
+
+.cerrar-menu { /*Esto es para que no muestre el boton X cuando está en escritorio*/
+  display: none;
+}
+
+/* =================================================================================
+    CONFIGURACIÓN  PARA EL MENÚ MOBILE 
+==================================================================================== */
+
+@media screen and (max-width: 575px) { /*Se activa cuando la pantalla mida menos o igual que 576px*/
+  
+  /*Esto es para que muestre el menu hamburguesa cuando está en mobile*/
+  .hamburger-menu { 
+    display: block;
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+
+  }
+
+  /*El contenedor (header) */
+  .main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*Contenedor(nav) Padre del botton y el ul*
+  Es la parte gris del menu*/
+  .header-nav {
+    position: fixed; /*Aquí esta actuando como hijo del header y significa mover el hijo en cualquier parte dentro del padre. Permite usar left, top..*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    padding: 1rem;
+    
+  
+    background-color: #333;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+
+    /* Esto es para que no muestre el nav cuando está en mobile y pongo .nav-list para que si me muestre la imagen que también esta adentro del nav*/
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /*Esto es para Java Script*/
+  .header-nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+/*Contenedor (ul) Padre de los li*/
+  .nav-list {
+    display: flex;
+    flex-direction: column; /*que ponga a sus hijos de manera vertical*/ 
+
+    margin: 0;   /* Espacio debajo de la X */
+    padding: 0;
+    width: 100%; /*significa que el elemento ocupa el 100% del ancho de su contenedor padre.*/
+    
+    
+  }
+
+/*Contenedor (li) Padre de los a*/
+  .nav-item{
+    margin: 0;
+    padding: 1rem 0;
+    
+  }
+
+  /*Esta es la líneas del menu gris y le pongo el not para que al ultimo no le ponga*/
+  .nav-item:not(:last-child){
+    border-bottom: 1px solid #8d7745;
+}
+
+  /*Contenedor (a) para manejar lo que está dentro el texto. Padre de los textos*/
+  .nav-link {
+    color: white;
+    text-decoration: none; /*Para quitarle los puntos y raya*/
+    font-size: 1.2rem;
+    font-weight: 1000;
+    padding: 0.8rem 0;
+    white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
+    
+  }
+
+  .nav-link:hover {
+  /*Cuando se pasa el mouse por los link del nav*/
+  background: none;
+  color: #cba135;
+  }
+
+
+  /*Contenedor del logo*/
+  /* .header-logo img {
+    margin-right: auto;
+  } */
+
+  /*logo*/
+  .header-logo img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cerrar-menu{
+    background-color: transparent;
+    margin: 0;
+    border: 0;
+    font-size: 1.50rem;
+    align-self: flex-end;
+    cursor: pointer;
+
+    display: block;  /*Esto es para que muestre el menu hamburguesa cuando está en mobile*/
+  }
+
+
 }
