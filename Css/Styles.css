@@ -150,7 +150,7 @@ body{
     right: 0;
     bottom: 0;
 
-    width: 280px;
+    width: 240px;
     height: 100vh;
 
     display: flex;
@@ -221,11 +221,13 @@ body{
   .nav-link {
     color: #d4b483;
     text-decoration: none; /*Para quitarle los puntos y raya*/
-    font-size: 1.2rem;
-    font-weight: 1000;
+    font-size: 1rem;
+    font-weight: 600;
     padding: 0.8rem 0;
     white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
     transition: .3s;
+    font-family: "Cormorant Garamond", sans-serif;
+
   }
 
   .nav-link:hover {
@@ -521,7 +523,8 @@ body{
     border-radius: 0%;
     text-align: center;
     font-size: 0.90rem;
+    margin: 0;
+    padding: 2rem;
   }
-
 
 }
