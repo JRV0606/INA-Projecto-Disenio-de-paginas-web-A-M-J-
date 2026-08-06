@@ -21,55 +21,79 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="Css\Catalogo.css" rel="stylesheet" >
-    <link href="../Css/Styles.css" rel="stylesheet"> <!--Se pone de último para que tenga prioridad-->
+    <link href="../Css/Catalogo.css" rel="stylesheet" />
+    <link href="../Css/Styles.css" rel="stylesheet" />
+    <!--Se pone de último para que tenga prioridad-->
 
     <title>Catálogo Productos | Celestial & Woods</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!--Para usar bootstrap (iconos)-->
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!--Para usar bootstrap (iconos)-->
+
     <!-- Font Awesome -->
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
-  
-  
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
   </head>
   <body>
-
     <!--------------------------------------------------------->
     <!------------------------MENU----------------------------->
     <!--------------------------------------------------------->
 
     <header class="main-header">
-
       <!-- Logo de la marca, centrado -->
-        <div class="header-logo">
-            <a href="../Index.html">
-                <img
-                    src="../Multimedia/Img/Logo_Celestial_Woods.png"
-                    alt="Logo Celestial & Woods"
-                />
-            </a>
-        </div>
+      <div class="header-logo">
+        <a href="../Index.html">
+          <img
+            src="../Multimedia/Img/Logo_Celestial_Woods.png"
+            alt="Logo Celestial & Woods"
+          />
+        </a>
+      </div>
 
-        <button class="hamburger-menu" id="abrir"><i class="bi bi-list"></i></button>
+      <button class="hamburger-menu" id="abrir">
+        <i class="bi bi-list"></i>
+      </button>
 
-        <nav class="header-nav" id="nav">
+      <nav class="header-nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
 
-          <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
-
-          <ul class="nav-list">
-              <li class="nav-item"> <a href="../Index.html" class="nav-link active "><i class="bi bi-house-door"></i> Inicio</a></li>
-              <li class="nav-item"> <a href="#" class="nav-link"> <i class="fa-solid fa-spray-can-sparkles"></i> Catálogo</a></li>
-              <li class="nav-item"> <a href="../Paginas/Guia_fragancias.html" class="nav-link"> <i class="fa-solid fa-leaf"></i> Guía de Fragancias</a> </li>
-              <li class="nav-item"> <a href="../Paginas/Preguntas.html" class="nav-link"> <i class="bi bi-question-circle"></i> Preguntas Frecuentes</a> </li>
-              <li class="nav-item"> <a href="../Paginas/Informacion.html" class="nav-link"><i class="bi bi-person"></i> Quienes somos</a></li>
-              <li class="nav-item"> <a href="../Paginas/Contacto.html" class="nav-link"><i class="bi bi-envelope"></i> Contacto</a> </li>
-          </ul>
-
-        </nav>
-
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="../Index.html" class="nav-link active"
+              ><i class="bi bi-house-door"></i> Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-solid fa-spray-can-sparkles"></i> Catálogo</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Guia_fragancias.html" class="nav-link">
+              <i class="fa-solid fa-leaf"></i> Guía de Fragancias</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Preguntas.html" class="nav-link">
+              <i class="bi bi-question-circle"></i> Preguntas Frecuentes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Informacion.html" class="nav-link"
+              ><i class="bi bi-person"></i> Quienes somos</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="../Paginas/Contacto.html" class="nav-link"
+              ><i class="bi bi-envelope"></i> Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main class="main-content">
@@ -95,7 +119,18 @@
       </section>
 
       <!-- Sección de filtros-->
-      <section class="filter-section">
+      <button
+        class="filtro-hamburguesa"
+        id="abrir-filtros"
+        type="button"
+        aria-controls="panel-filtros"
+        aria-expanded="false"
+      >
+        <i class="bi bi-funnel"></i>
+        <span>Mostrar filtros</span>
+      </button>
+
+      <section class="filter-section" id="panel-filtros">
         <h2>Filtrar por:</h2>
 
         <!-- Filtro de rango de precio -->
@@ -211,7 +246,7 @@
         <div class="product-item">
           <a href="Detalle_Producto.html" target="_blank">
             <img
-              src="../Multimedia/Img/Sauvage.jpeg"
+              src="../Multimedia/Img/Sauvage.png"
               alt="Dior Sauvage"
               width="200"
               height="200"
@@ -223,7 +258,7 @@
 
         <div class="product-item">
           <img
-            src="../Multimedia/Img/Valentino.jpeg"
+            src="../Multimedia/Img/Valentino.png"
             alt="Valentino"
             width="200"
             height="200"
@@ -234,7 +269,7 @@
 
         <div class="product-item">
           <img
-            src="../Multimedia/Img/Club de nuit.jpeg"
+            src="../Multimedia/Img/Club de nuit.png"
             alt="Club de nuit"
             width="200"
             height="200"
@@ -245,7 +280,7 @@
 
         <div class="product-item">
           <img
-            src="../Multimedia/Img/9pm black.jpeg"
+            src="../Multimedia/Img/9pm black.png"
             alt="9pm black"
             width="200"
             height="200"
@@ -256,7 +291,7 @@
 
         <div class="product-item">
           <img
-            src="../Multimedia/Img/Versace.jpeg"
+            src="../Multimedia/Img/Versace.png"
             alt="Versace"
             width="200"
             height="200"
@@ -267,8 +302,8 @@
 
         <div class="product-item">
           <img
-            src="../Multimedia/Img/Khamban.jpeg"
-            alt="Khamban"
+            src="../Multimedia/Img/Khamrah.png"
+            alt="Khamrah Lattafa"
             width="200"
             height="200"
           />
@@ -278,7 +313,7 @@
 
         <div class="product-item">
           <img
-            src="../Multimedia/Img/Hawas.jpeg"
+            src="../Multimedia/Img/Hawas.png"
             alt="Hawas"
             width="200"
             height="200"
@@ -289,7 +324,7 @@
 
         <div class="product-item">
           <img
-            src="../Multimedia/Img/Odyssey.jpeg"
+            src="../Multimedia/Img/Odyssey.png"
             alt="Odyssey"
             width="200"
             height="200"
@@ -355,7 +390,9 @@
           Terminos y condiciones &vert; Política de Privacidad
         </p>
       </footer>
-      <script src="../Java/main.js"></script> <!--Se pone al final porque ocupa primero haber leido todo el html-->
+      <script src="../Java/catalogo.js"></script>
+      <script src="../Java/main.js"></script>
+      <!--Se pone al final porque ocupa primero haber leido todo el html-->
     </main>
   </body>
 </html>
