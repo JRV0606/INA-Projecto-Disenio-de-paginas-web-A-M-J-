@@ -161,7 +161,8 @@ body{
     #3c3b3a 0%,
     #2f2f2f 45%,
     #232323 100%
-);
+    );
+
     box-shadow:
     -15px 0 40px rgba(0,0,0,.45),
     0 0 0 100vmax rgba(0,0,0,.5);
@@ -174,6 +175,8 @@ body{
 
     transform: translateX(100%);
     transition: transform .35s ease;
+
+    z-index: 10; /*Esto es para las imagenes del fondo que no se vean encima del menu*/
   }
 
   /*Esto es para Java Script*/
