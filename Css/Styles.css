@@ -274,32 +274,36 @@ body{
   ==================================================================================== */
 
   footer {
-    width: 100%;
-    height: 190vh;
-    /* background-color:beige ; */
+    width: 100%; /*Ocupa el 100% del ancho de la pantalla*/
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     padding-top: 1rem;
     padding-bottom:0;
-    margin-bottom: 1;
+    margin-bottom: 0;
     border-top: 1px solid #87868477;
+    
   }
 
   /*logo*/
   .logo {
-    width: 100px;
+    width: 100px; /*Se usa px para que mantenga siempre esa medida sin importar el tamaño de la pantalla*/
     height: 100px;
-    margin: auto;
   }
 
-  section {
+  /*Estilo general para todas las section del footer*/
+
+  footer section {
     border-color: transparent;
     background-color: black;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 100%;  /*Esto hace que siempre el hijo ocupe el 100% del ancho de su elemento padre que es el footer y a su vez footer tambien tiene width 100%*/
+    /*por eso los elementos siempre van a quedar centrados si pongo justife content center aunque alarge la pantalla*/
   }
 
-  li {
-    font-family: Montserrat;
+  footer li {
+    font-family: "Montserrat",sans-serif;
     font-size: 0.70rem;
     font-weight: 400;
     white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
@@ -309,15 +313,6 @@ body{
     list-style: none;
   }
 
-  
-  
-
-  /*--------Todo sobre la sección de footer-menu--------*/
-  .footer-menu {
-    padding-bottom: 0%;
-    margin-bottom: 0%;
-  }
-
   footer h3 {
     font-size: 0.90rem;
     font-weight: 400;
@@ -325,6 +320,10 @@ body{
     padding-left: 0.90rem;
     padding-bottom: 0.3rem;
   }
+
+  /*----------------------------------------------------*/
+  /*--------Todo sobre la sección de footer-menu--------*/
+  /*----------------------------------------------------*/
 
   /*Contenedor (ul) Padre de los li*/
   .nav-list-footer {
@@ -360,14 +359,16 @@ body{
     color: #f6deb0;
   }
   
-  /*--------Todo sobre la sección de footer-social--------*/
 
-  /*El contenedor principal de toda esta sección*/
-  .footer-menu{
-    width: 100%; /*Esto hace que siempre el hijo ocupe el 100% del ancho de su elemento padre que es el footer y a su vez footer tambien tiene width 100%*/
-    /*por eso los elementos siempre van a quedar centrados si pongo justife content center aunque alarge la pantalla*/
-  }
+  /*------------------------------------------------------*/
+  /*--------Todo sobre la sección de footer-social--------*/
+  /*------------------------------------------------------*/
   
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+  }
+
   /*Contenedor (nav) padre de los a*/
   .footer-social nav{
     display: flex;
@@ -405,17 +406,20 @@ body{
     color: #cba135;
     padding: 0.2rem;
     margin: 0;
-    border-radius: 20px;
 
   }
 
-  /*--------Todo sobre la sección de footer-whatsapp--------*/
+  /*----------------------------------------------------*/
+  /*--------Todo sobre la sección de footer-whatsapp----*/
+  /*----------------------------------------------------*/
 
   .footer-whatsapp {
     display: flex;
     border: solid 1px #cba135;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    border-radius: 10px;
     
   }
 
@@ -442,32 +446,36 @@ body{
   }
   
 
-
+  /*----------------------------------------------------*/
   /*--------Todo sobre la sección de footer-hour--------*/
+  /*----------------------------------------------------*/
 
   .footer-hours li {
     padding-top: 0.7rem;
+    padding-left: 1.15rem;
 
   }
-
-
   
+  /*-----------------------------------------------------*/
   /*--------Todo sobre la sección de footer-legal--------*/
+  /*-----------------------------------------------------*/
 
   .footer-legal{
-    margin-top: 0rem;
+    width: 90%;
     padding-top: 0;
-}
+    margin-bottom: 2rem;
+    
+  }
 
-.legal-list{
+  .legal-list{
     list-style: none;
     margin: 0;
     padding: 0;
-}
+  }
 
 .legal-item{
     border-bottom: 1px solid rgba(255, 255, 255, 0.252);
-}
+  }
 
 .legal-link{
     display: flex;
@@ -480,42 +488,43 @@ body{
     color: white;
 
     transition: .3s;
-}
+  }
 
 .legal-left{
     display: flex;
     align-items: center;
     gap: 1rem;
-}
+  }
 
 .legal-left i, .legal-link i{
     color: #cba135;
     font-size: 1.2rem;
-}
+  }
 
 .legal-left span{
     font-size: 0.9rem;
     font-family: "Cormorant Garamond", sans-serif;
-}
+  }
 
 .footer-legal i{
     font-size: 0.9rem;
-}
+  }
 
 .legal-link:hover{
     color: #cba135;
-}
+  }
 
 .legal-link:hover .bi-chevron-right{
     transform: translateX(5px);
-}
+  }
 
 .bi-chevron-right{
     transition: transform .3s ease;
-}
+  }
 
-  
-  /*--------Todo sobre la sección de copyright--------*/
+  /*----------------------------------------------------*/
+  /*--------Todo sobre la sección de copyright----------*/
+  /*----------------------------------------------------*/
 
   .footer-copy{
     width: 100%;
@@ -525,6 +534,7 @@ body{
     font-size: 0.90rem;
     margin: 0;
     padding: 2rem;
+    
   }
 
 }
