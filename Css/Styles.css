@@ -286,13 +286,42 @@ body{
 
   /*logo*/
   .logo {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     margin: auto;
   }
 
+  section {
+    border-color: transparent;
+    background-color: black;
+  }
+
+  li {
+    font-family: Montserrat;
+    font-size: 0.70rem;
+    font-weight: 400;
+    white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  
+  
+
+  /*--------Todo sobre la sección de footer-menu--------*/
   .footer-menu {
-    border-color:black;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+  }
+
+  footer h3 {
+    font-size: 0.90rem;
+    font-weight: 400;
+    border-left:solid #cba135;
+    padding-left: 0.90rem;
+    padding-bottom: 0.3rem;
   }
 
   /*Contenedor (ul) Padre de los li*/
@@ -302,7 +331,6 @@ body{
     margin: 0;   /* Espacio debajo de la X */
     padding: 0;
     width: 100%; /*significa que el elemento ocupa el 100% del ancho de su contenedor padre.*/
-    list-style: none;
   }
 
   /*Contenedor (li) Padre de los a*/
@@ -315,18 +343,13 @@ body{
 
   /*Esta es la líneas del menu gris y le pongo el not para que al ultimo no le ponga*/
   .nav-item-footer:not(:last-child){
-    border-bottom:1px solid rgba(215, 158, 12, 0.45);
+    border-bottom:1px solid rgba(215, 157, 12, 0.199);
   }
 
   /*Contenedor (a) para manejar lo que está dentro el texto. Padre de los textos*/
   .nav-link-footer {
     color: white;
     text-decoration: none; /*Para quitarle los puntos y raya*/
-    font-size: 0.70rem;
-    font-weight: 400;
-    padding:0;
-    white-space: nowrap; /*le dice al navegador que nunca haga un salto de línea dentro del texto.*/
-    font-family: Montserrat;
   }
 
   .nav-link-footer:hover {
@@ -334,8 +357,171 @@ body{
     background: none;
     color: #f6deb0;
   }
+  
+  /*--------Todo sobre la sección de footer-social--------*/
+
+  /*El contenedor principal de toda esta sección*/
+  .footer-menu{
+    width: 100%; /*Esto hace que siempre el hijo ocupe el 100% del ancho de su elemento padre que es el footer y a su vez footer tambien tiene width 100%*/
+    /*por eso los elementos siempre van a quedar centrados si pongo justife content center aunque alarge la pantalla*/
+  }
+  
+  /*Contenedor (nav) padre de los a*/
+  .footer-social nav{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+
+  /*Este el contenedor(a) padre de los i los textos*/
+  /*Al final es el círculo de las redes*/
+  .social-icon{
+      width: 2.5rem;
+      height:2.5rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #cba135;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: .3s;
+  }
+
+  .social-icon i{
+      font-size: 1rem;
+  }
+
+  /*Esto es para cuando se toquen con el mouse se hagan un poquito para arriba*/
+  .social-icon:hover{
+      transform: translateY(-4px);
+  }
+
+  footer .bi{
+    background-color: black;
+    color: #cba135;
+    padding: 0.2rem;
+    margin: 0;
+    border-radius: 20px;
+
+  }
+
+  /*--------Todo sobre la sección de footer-whatsapp--------*/
+
+  .footer-whatsapp {
+    display: flex;
+    border: solid 1px #cba135;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .footer-whatsapp i {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  .footer-whatsapp div {
+    margin-left: 0%;
+    border-left: solid 2px #cba135;;
+  }
+
+  .footer-whatsapp h3, .footer-whatsapp a{
+
+    border-left: none;
+    padding-left: 1rem;
+    text-decoration: none;
+
+  }
+
+  .footer-whatsapp a:hover {
+    color: #cba135;
+  }
+  
+
+
+  /*--------Todo sobre la sección de footer-hour--------*/
+
+  .footer-hours li {
+    padding-top: 0.7rem;
+
+  }
+
 
   
+  /*--------Todo sobre la sección de footer-legal--------*/
+
+  .footer-legal{
+    margin-top: 0rem;
+    padding-top: 0;
+}
+
+.legal-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.legal-item{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.252);
+}
+
+.legal-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 0;
+
+    text-decoration: none;
+    color: white;
+
+    transition: .3s;
+}
+
+.legal-left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.legal-left i, .legal-link i{
+    color: #cba135;
+    font-size: 1.2rem;
+}
+
+.legal-left span{
+    font-size: 0.9rem;
+    font-family: "Cormorant Garamond", sans-serif;
+}
+
+.footer-legal i{
+    font-size: 0.9rem;
+}
+
+.legal-link:hover{
+    color: #cba135;
+}
+
+.legal-link:hover .bi-chevron-right{
+    transform: translateX(5px);
+}
+
+.bi-chevron-right{
+    transition: transform .3s ease;
+}
+
+  
+  /*--------Todo sobre la sección de copyright--------*/
+
+  .footer-copy{
+    width: 100%;
+    background-color: #333;
+    border-radius: 0%;
+    text-align: center;
+    font-size: 0.90rem;
+  }
 
 
 }
