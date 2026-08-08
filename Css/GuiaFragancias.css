@@ -1,0 +1,252 @@
+
+main {
+
+    width: 100%;
+    
+}
+
+
+/*=================================================================================
+    ESTILOS BASE (PARA MOBILE Y DESKTOP)  Y CONFIGURACIÓN MOBILE 
+====================================================================================*/
+
+/*---------Seccion 1 contenedor (Guia de fragancias)------*/
+
+.guia-fragancias {
+    width: 100%;
+    background: #000;
+}
+
+/* IMAGEN */
+
+.guia-fragancias img {
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    width: 100%;
+    /* La imagen se difumina hacia el negro */
+    mask-image: linear-gradient(
+        to bottom,
+        black 60%,
+        transparent 100%
+    );
+}
+
+
+/* CONTENIDO */
+.guia-contenido {
+    position: relative;
+    z-index: 2;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TÍTULO */
+.guia-contenido h1 {
+    margin: 0 0 25px;
+    color: #cba035b9;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    line-height: 0.9;
+    font-weight: 700;
+    margin-top: -3rem;
+}
+
+/* TEXTO */
+.guia-contenido p {
+    margin: 0;
+    color: #f5f5f5;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+}
+
+/*MENU breadcrumb  QUE NO APAREZCA EN EL MOVIL*/
+.breadcrumb {
+        display: none;
+}
+
+
+
+/*---------Seccion 2 contenedor (utilidad de la guía)------*/
+
+
+.guide-benefits {
+    background: linear-gradient(
+    180deg,
+    #3c3b3a 0%,
+    #2f2f2f 45%,
+    #232323 100%
+    );
+
+    padding: 0.9rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.guide-benefits ul {
+    width: auto;
+}
+
+.guide-benefits h2 {
+    text-align: center;
+    padding: 0.7rem;
+    color: #cba03594;
+    font-size: 1.3rem;
+    font-family: "Cormorant Garamond", sans-serif ;
+    font-weight: 900;
+}
+
+.guide-benefits li {
+    display: flex;
+    gap: 0.5rem;
+    line-height: 1rem;
+    font-family: "Montserrat", sans-serif ;
+    padding: 0.5rem;
+    align-items: center;
+    font-size: 0.6rem;
+
+}
+.guide-benefits .bi {
+
+    font-size: 1.5rem;
+    color: #cba03594;
+}
+
+/*----Estilo general para todos los acordion-------*/
+
+.accordion {
+    margin: 1rem 1rem;
+    padding:0.1rem 0.6rem;
+    border: 0;
+    background-color:#3c3b3a5b; 
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    box-shadow:
+    6px 6px 9px rgba(250, 248, 248, 0.105), /*Sombra 1*/
+    0 0 9px rgba(241, 196, 83, 0.914); /*Sombra 2*/
+
+    /*Primer número: Indica cuánto se mueve la sombra hacia la izquierda (-) o derecha (+).*/
+    /*Segundo número: Indica cuánto se mueve la sombra hacia arriba (-) o abajo (+).*/
+    /*Tercer número: Controla qué tan difuminada está la sombra.
+    5px  → sombra muy definida
+    15px → sombra suave
+    30px → sombra bastante difuminada
+    50px → sombra muy extendida*/
+
+}
+
+/*Para eliminar la cajita del checkbox*/
+
+input[type="checkbox"]{
+    display: none;
+}
+
+/*Para los títulos que va a presionar el usuario*/
+.accordion label {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 1000;
+    cursor: pointer;
+    color: #cba035b9;
+    /* white-space: nowrap; */
+
+}
+/*Este es el + que ponemos a la par del título que presionamos*/
+label::before{
+    content: '+';
+    margin-right: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 1000;
+
+}
+
+.accordion .content {
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden; /*Aquí le estoy diciendo que esconda el contenido*/
+    transition: max-height 0.5s, padding 0.5s; 
+}
+
+.accordion input[type="checkbox"]:checked + label + .content {
+    max-height: 2000px;
+    padding: 0.6rem;
+
+}
+
+/*Para el menos que aparece después de abrir*/
+.accordion input[type="checkbox"]:checked + label::before {
+    content: "-";
+}
+
+.accordion p, .accordion li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+}
+
+.accordion h2, .accordion h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 1000;
+    color: #dcb249b0;
+    padding: 0rem;
+}
+
+
+
+/*---------Seccion 3 contenedor (Familias de aromas)------*/
+
+/*---------Seccion 4 contenedor (Notas olfativas)------*/
+
+/*---------Seccion 5 contenedor (Cuanto dura un aroma)------*/
+
+/*---------Seccion 6 contenedor (Que es el ph)------*/
+
+/*---------Seccion 7 contenedor (Tipos de perfumeria)------*/
+
+/*---------Seccion 8 contenedor (Donde aplicar el perfume)------*/
+
+/*---------Seccion 8 contenedor (Como escoger tu perfume ideal)------*/
+
+/*---------Seccion 8 contenedor (layering)------*/
+
+/*---------Seccion 8 contenedor (Como conservar tu aroma)------*/
+
+/*---------Seccion 8 contenedor (Maceración)------*/
+
+
+
+@media screen and (min-width: 950px){
+
+    details {
+        display: block;
+        
+    }
+
+    details > *:not(summary) {
+        display: block;
+    }
+
+    summary {
+        list-style: none;
+        cursor: default;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+}
