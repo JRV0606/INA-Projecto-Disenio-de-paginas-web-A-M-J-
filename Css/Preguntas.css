@@ -1,3 +1,7 @@
+/*=================================================================================
+  Preguntas.css - comentarios distribuidos
+====================================================================================*/
+
 main hr {
   border: none;
   height: 1px;
@@ -6,6 +10,8 @@ main hr {
   margin: 0.5rem auto;
 }
 .Title {
+  /* Bloque de cabecera: título, descripción e imagen.
+     Mobile: columna; en @media se cambia a grid para colocar imagen a la derecha. */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -23,6 +29,7 @@ main hr {
 }
 
 .Title p {
+  /* Pequeña descripción contextual bajo el título. */
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   line-height: 1.6;
@@ -30,6 +37,7 @@ main hr {
 }
 
 .Title img {
+  /* Imagen hero del bloque; en desktop se sitúa a la derecha. */
   width: 100%;
   max-height: 220px;
   object-fit: cover;
@@ -37,6 +45,7 @@ main hr {
 }
 
 .Details-question {
+  /* Fila que contiene el icono y el elemento `<details>` para una pregunta. */
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
@@ -44,6 +53,7 @@ main hr {
 }
 
 .Details-question > i {
+  /* Icono circular a la izquierda de la pregunta. */
   flex-shrink: 0;
   width: 2.25rem;
   height: 2.25rem;
@@ -57,6 +67,7 @@ main hr {
 }
 
 .Details-question details {
+  /* Caja que envuelve el summary y el contenido desplegable. */
   flex: 1;
   background: #2b2b2b;
   border-radius: 0.75rem;
@@ -64,6 +75,7 @@ main hr {
 }
 
 .Details-question summary {
+  /* Encabezado clickable del detalle. Se maquilla para ocultar marcador nativo. */
   list-style: none;
   cursor: pointer;
   display: flex;
@@ -77,10 +89,12 @@ main hr {
 }
 
 .Details-question summary::-webkit-details-marker {
+  /* Oculta el marcador por defecto en WebKit para usar un pseudo `::after`. */
   display: none;
 }
 
 .Details-question summary::after {
+  /* Indicador visual para abrir/cerrar; rota cuando está abierto. */
   content: "+";
   flex-shrink: 0;
   font-size: 1.3rem;
@@ -89,10 +103,12 @@ main hr {
 }
 
 .Details-question details[open] summary::after {
+  /* Rotación del símbolo cuando el detalle está abierto. */
   transform: rotate(45deg);
 }
 
 .Details-question details p {
+  /* Contenido de la respuesta dentro del detalle. */
   padding: 0 1rem 1rem;
   font-family: "Montserrat", sans-serif;
   font-size: 0.78rem;
@@ -101,6 +117,7 @@ main hr {
 }
 
 .Class-Ayuda {
+  /* Tarjeta de ayuda destacada: borde dorado y botón visual al final. */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,6 +130,7 @@ main hr {
 }
 
 .Class-Ayuda div {
+  /* Icono circular dentro de la tarjeta de ayuda. */
   width: 3rem;
   height: 3rem;
   display: flex;
@@ -125,18 +143,21 @@ main hr {
 }
 
 .Class-Ayuda h4 {
+  /* Título interno de la tarjeta de ayuda. */
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-size: 1.2rem;
 }
 
 .Class-Ayuda p {
+  /* Texto de apoyo dentro de la tarjeta. */
   font-family: "Montserrat", sans-serif;
   font-size: 0.82rem;
   color: #cccccc;
 }
 
 .Class-Ayuda p:last-of-type {
+  /* Botón/etiqueta final destacado dentro de la tarjeta. */
   background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
   color: black;
   font-weight: 600;
@@ -150,7 +171,8 @@ main hr {
 ==================================================================================== */
 
 @media screen and (min-width: 576px) {
-  /* ---- Title: texto a la izquierda, imagen a la derecha ---- */
+  /* Ajustes para desktop pequeño: coloca la imagen a la derecha y
+     mejora tamaños/espaciados para legibilidad. */
   .Title {
     display: grid;
     grid-template-columns: 1fr 1fr;

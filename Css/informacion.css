@@ -1,4 +1,3 @@
-
 /*=================================================================================
     ESTILOS BASE (PARA MOBILE Y DESKTOP)  Y CONFIGURACIÓN MOBILE 
 ====================================================================================*/
@@ -8,12 +7,17 @@
 }
 
 .About-Content {
+  /* Layout que agrupa el bloque de texto (`.About-Text`) y la imagen
+     (`.About-Image`). Mobile: columna; Desktop: fila (ver @media). */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .About-Image {
+  /* Contenedor visual para la imagen principal.
+     - `aspect-ratio` asegura proporción consistente.
+     - `overflow: auto` protege contra contenido inesperado. */
   width: 100%;
   aspect-ratio: 2 / 1;
   margin: 0;
@@ -23,6 +27,7 @@
 }
 
 .About-Image img {
+  /* Imagen responsiva dentro del contenedor: cubre y mantiene radios. */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -31,6 +36,7 @@
 }
 
 .main-title {
+  /* Título principal de la página. Tipografía serif destacada. */
   font-family: "Cormorant Garamond", sans-serif;
   font-weight: 800;
   font-size: 2rem;
@@ -40,6 +46,8 @@
 }
 
 .main-description {
+  /* Texto introductorio / descripción. Uso de peso ligero para
+     contraste con el título; buen interlineado para lectura. */
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 0.95rem;
@@ -49,12 +57,15 @@
 }
 
 .Main-content > hr {
+  /* Separador sutil con tono dorado translúcido. */
   border: none;
   border-top: 1px solid rgba(203, 161, 53, 0.35);
   margin: 2rem 0;
 }
 
 .main-subtitle {
+  /* Subtítulo para secciones internas (ej. pilares). Centrado en
+     mobile, alineado a la izquierda en desktop. */
   font-family: "Cormorant Garamond", sans-serif;
   font-weight: 700;
   font-size: 1.7rem;
@@ -64,6 +75,7 @@
 }
 
 .main-pillars {
+  /* Contenedor de las tarjetas tipo 'pilar'. Mobile: columna; desktop: fila. */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -71,6 +83,8 @@
 }
 
 .pillar {
+  /* Tarjeta informativa: icono + título + descripción.
+     Se usa grid para alinear icono y contenido. */
   background-color: #2b2b2b;
   border-radius: 1.25rem;
   padding: 1.75rem 1.5rem;
@@ -86,6 +100,7 @@
 }
 
 .pillar-icon {
+  /* Icono del pilar: mantener tamaño fijo para consistencia visual. */
   grid-area: icon;
   width: 2.75rem;
   height: 2.75rem;
@@ -93,6 +108,7 @@
 }
 
 .pillar-title {
+  /* Título dentro de la tarjeta. Usa la familia serif para marcar jerarquía. */
   grid-area: title;
   align-self: center;
   font-family: "Cormorant Garamond", sans-serif;
@@ -103,6 +119,7 @@
 }
 
 .pillar-title hr {
+  /* Línea decorativa bajo el título (dorado). */
   border: none;
   border-top: 2px solid #cba135;
   width: 2.5rem;
@@ -110,6 +127,7 @@
 }
 
 .pillar-description {
+  /* Descripción secundaria del pilar: texto ligero y legible. */
   grid-area: desc;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -119,8 +137,9 @@
   margin-top: 1rem;
 }
 
-
 @media screen and (min-width: 950px) {
+  /* Ajustes para pantallas grandes: convertir layout a dos columnas
+     y ajustar tamaños/paddings para mayor jerarquía. */
   .Main-content {
     padding: 3rem 0 5rem;
   }
