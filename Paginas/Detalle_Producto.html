@@ -21,18 +21,17 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../Css/Styles.css" />
-    <link rel="stylesheet" href="../Css/DetalleProducto.css" />
+    <link rel="stylesheet" href="../css/Styles.css" />
+    <link rel="stylesheet" href="../css/DetalleProducto.css" />
     <title>Detalle Producto | Celestial & Woods</title>
     <link href="../Css/Styles.css" rel="stylesheet" />
-    
+
     <!--Se pone de último para que tenga prioridad-->
     <!--Para usar bootstrap (iconos)-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
-    
 
     <!-- Font Awesome -->
     <link
@@ -48,9 +47,9 @@
     <header class="main-header">
       <!-- Logo de la marca, centrado -->
       <div class="header-logo">
-        <a href="../Index.html">
+        <a href="../index.html">
           <img
-            src="../Multimedia/Img/Logo_Celestial_Woods.png"
+            src="../multimedia/img/Logo_Celestial_Woods.png"
             alt="Logo Celestial & Woods"
           />
         </a>
@@ -65,32 +64,32 @@
 
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="../Index.html" class="nav-link"
+            <a href="../index.html" class="nav-link"
               ><i class="bi bi-house-door"></i> Inicio</a
             >
           </li>
           <li class="nav-item">
-            <a href="../Paginas/Catalogo_Productos.html" class="nav-link">
+            <a href="../paginas/Catalogo_Productos.html" class="nav-link">
               <i class="fa-solid fa-spray-can-sparkles"></i> Catálogo</a
             >
           </li>
           <li class="nav-item">
-            <a href="../Paginas/Guia_fragancias.html" class="nav-link">
+            <a href="../paginas/Guia_fragancias.html" class="nav-link">
               <i class="fa-solid fa-leaf"></i> Guía de Fragancias</a
             >
           </li>
           <li class="nav-item">
-            <a href="../Paginas/Preguntas.html" class="nav-link">
+            <a href="../paginas/Preguntas.html" class="nav-link">
               <i class="bi bi-question-circle"></i> Preguntas Frecuentes</a
             >
           </li>
           <li class="nav-item">
-            <a href="../Paginas/Informacion.html" class="nav-link"
+            <a href="../paginas/Informacion.html" class="nav-link"
               ><i class="bi bi-person"></i> Quienes somos</a
             >
           </li>
           <li class="nav-item">
-            <a href="../Paginas/Contacto.html" class="nav-link"
+            <a href="../paginas/Contacto.html" class="nav-link"
               ><i class="bi bi-envelope"></i> Contacto</a
             >
           </li>
@@ -101,11 +100,11 @@
     <main class="main-content">
       <!-- Ruta de navegación (breadcrumb) -->
       <nav class="breadcrumb">
-        <a href="../Index.html" class="breadcrumb-link">Inicio</a>
+        <a href="../index.html" class="breadcrumb-link">Inicio</a>
         <span class="breadcrumb-separator">&gt;</span>
         <a href="Catalogo_Productos.html" class="breadcrumb-link">Catalogo</a>
         <span class="breadcrumb-separator">&gt;</span>
-        <span class="breadcrumb-current">Sauvage</span>
+        <span class="breadcrumb-current" id="breadcrumb-producto">Sauvage</span>
       </nav>
 
       <!-- Buscador que redirige al catálogo -->
@@ -126,25 +125,11 @@
       <!-- Sección principal con la información del producto -->
       <section class="product-detail">
         <!-- Miniaturas  -->
-        <aside class="product-gallery">
-          <img
-            src="../Multimedia/Img/Sauvage 2.jpg"
-            alt="Miniatura 1 del producto"
-            width="100"
-            height="100"
-            class="gallery-thumbnail"
-          />
-          <img
-            src="../Multimedia/Img/Sauvage 3.png"
-            alt="Miniatura 2 del producto"
-            width="100"
-            height="100"
-            class="gallery-thumbnail"
-          />
-        </aside>
+        <aside class="product-gallery" id="galeria-producto"></aside>
         <!-- Imagen principal del producto -->
         <div class="product-main-image">
           <img
+            id="imagen-principal-producto"
             src="../Multimedia/Img/Sauvage.png"
             alt="Imagen principal del producto"
             width="300"
@@ -153,11 +138,11 @@
         </div>
         <!-- Nombre, precio, descripción de uso y contacto por WhatsApp -->
         <aside class="product-info">
-          <h1 class="product-name">
+          <h1 class="product-name" id="nombre-producto">
             Sauvage Eau de Toilette, de Christian Dior
           </h1>
-          <p class="product-price">₡100.000 I.V.A.I</p>
-          <p class="product-description">
+          <p class="product-price" id="precio-producto">₡100.000 I.V.A.I</p>
+          <p class="product-description" id="perfil-uso-producto">
             Perfil de uso: Pensada para hombres libres, modernos y decididos, es
             ideal para uso diario durante todo el año, con buena duración y una
             estela reconocible. Es uno de los perfumes masculinos más vendidos
@@ -165,24 +150,30 @@
             clásico "todo terreno", mientras que otros lo consideran demasiado
             simple frente a otras creaciones de Dior.
           </p>
-          <div class="whatsapp-contact">
+          <a
+            class="whatsapp-contact"
+            id="whatsapp-producto"
+            href="https://wa.me/50662339082"
+            target="_blank"
+            rel="noopener"
+          >
             <img
-              src="../Multimedia/Img/Whatsapp Icon.png"
+              src="../multimedia/img/Whatsapp Icon.png"
               alt="Logo de WhatsApp"
               width="30"
               height="30"
             />
             <p>
               Para mas información: <br />
-              +506 6039 1808
+              +506 6233 9082
             </p>
-          </div>
+          </a>
         </aside>
       </section>
 
       <!-- Descripción del producto -->
       <section class="product-description">
-        <p>
+        <p id="descripcion-producto">
           La fuerte ráfaga cítrica de Sauvage Eau de Toilette está potentemente
           anclada por la nobleza ambarina del ambroxán, el elemí resinoso y las
           maderas. La fragancia se presenta como radicalmente fresca, cruda y
@@ -197,7 +188,7 @@
       <!-- Logo de la marca -->
       <img
         class="logo"
-        src="../Multimedia/Img/Logo_Celestial_Woods.png"
+        src="../multimedia/img/Logo_Celestial_Woods.png"
         alt="Logo Celestial & Woods"
       />
 
@@ -205,30 +196,33 @@
         <h3>Menú Navegación</h3>
         <ul class="nav-list-footer">
           <li class="nav-item-footer">
-            <a href="../Index.html" class="nav-link-footer"> Inicio</a>
+            <a href="../index.html" class="nav-link-footer"> Inicio</a>
           </li>
           <li class="nav-item-footer">
-            <a href="../Paginas/Catalogo_Productos.html" class="nav-link-footer">
+            <a
+              href="../Paginas/Catalogo_Productos.html"
+              class="nav-link-footer"
+            >
               Catálogo</a
             >
           </li>
           <li class="nav-item-footer">
-            <a href="../Paginas/Guia_fragancias.html" class="nav-link-footer">
+            <a href="../paginas/Guia_fragancias.html" class="nav-link-footer">
               Guía de Fragancias</a
             >
           </li>
           <li class="nav-item-footer">
-            <a href="../Paginas/Preguntas.html" class="nav-link-footer">
+            <a href="../paginas/Preguntas.html" class="nav-link-footer">
               Preguntas Frecuentes</a
             >
           </li>
           <li class="nav-item-footer">
-            <a href="../Paginas/Informacion.html" class="nav-link-footer">
+            <a href="../paginas/Informacion.html" class="nav-link-footer">
               Quienes somos</a
             >
           </li>
           <li class="nav-item-footer">
-            <a href="../Paginas/Contacto.html" class="nav-link-footer">
+            <a href="../paginas/Contacto.html" class="nav-link-footer">
               Contacto</a
             >
           </li>
@@ -239,9 +233,29 @@
         <h3>Síguenos</h3>
 
         <nav aria-label="Redes sociales">
-          <a href="#" class="social-icon"> <i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-icon"> <i class="bi bi-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+          <a
+            href="https://www.facebook.com/share/1H3A6cKN8u/"
+            class="social-icon"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/celestial_woods_?igsi=bzFpeXpoeDBkMzht"
+            class="social-icon"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="bi bi-instagram"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@celestial_woods?_r=1&_t=ZS-996cXlFkd6O"
+            class="social-icon"
+            target="_blank"
+            rel="noopener"
+            ><i class="bi bi-tiktok"></i
+          ></a>
         </nav>
       </section>
 
@@ -251,7 +265,13 @@
 
         <div class="left">
           <h3>Compra por WhatsApp</h3>
-          <a href="#"> +506 6000 0000 </a>
+          <a
+            href="https://wa.me/50662339082?text=Hola%2C%20me%20gustaria%20obtener%20mas%20informacion%20sobre%20sus%20perfumes."
+            target="_blank"
+            rel="noopener"
+          >
+            +506 6233 9082
+          </a>
         </div>
       </section>
 
@@ -311,6 +331,8 @@
         </p>
       </section>
     </footer>
+    <script src="../Java/productos.js"></script>
+    <script src="../Java/detalle.js"></script>
     <script src="../Java/main.js"></script>
     <!--Se pone al final porque ocupa primero haber leido todo el html-->
   </body>
