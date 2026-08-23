@@ -149,14 +149,14 @@ main hr {
   font-size: 1.2rem;
 }
 
-.Class-Ayuda p {
+.Class-Ayuda a {
   /* Texto de apoyo dentro de la tarjeta. */
   font-family: "Montserrat", sans-serif;
   font-size: 0.82rem;
   color: #cccccc;
 }
 
-.Class-Ayuda p:last-of-type {
+.Class-Ayuda a:last-of-type {
   /* Botón/etiqueta final destacado dentro de la tarjeta. */
   background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
   color: black;
@@ -248,12 +248,12 @@ main hr {
     grid-row: 1;
   }
 
-  .Class-Ayuda p:nth-of-type(1) {
+  .Class-Ayuda a:nth-of-type(1) {
     grid-column: 2;
     grid-row: 2;
   }
 
-  .Class-Ayuda p:last-of-type {
+  .Class-Ayuda a:last-of-type {
     grid-column: 2;
     grid-row: 3;
     justify-self: start;
