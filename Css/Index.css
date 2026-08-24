@@ -1,75 +1,75 @@
 main {
-    margin-left:0 !important;
-    margin-right:0 !important;
-    width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
 }
 
 /* Toda esta parte es del hero-section */
 .hero-section {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-    border: 0;
-    border-radius: 0;
-  }
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+}
 
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-  .hero-section.left {
-    position: relative;
-    z-index: 2;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem 4rem;
-    margin-left: 10rem;
-    background-color: transparent;
-  }
+.hero-section.left {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 4rem;
+  margin-left: 10rem;
+  background-color: transparent;
+}
 
-  .hero-section h1 {
-    font-family: "Cormorant Garamond", serif;
-    color: #131313;
-    font-size: 4rem;
-    font-weight: 900;
-    margin-bottom: 1rem;
-  }
+.hero-section h1 {
+  font-family: "Cormorant Garamond", serif;
+  color: #131313;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
 
-  .hero-section h3 {
-    font-family: "Montserrat", serif;
-    color: #b59854;
-    font-size: 1.1rem;
-  }
+.hero-section h3 {
+  font-family: "Montserrat", serif;
+  color: #b59854;
+  font-size: 1.1rem;
+}
 
-  .hero-section strong {
-    color: #b59854;
-  }
+.hero-section strong {
+  color: #b59854;
+}
 
-  .hero-section hr {
-    border: none;
-  }
+.hero-section hr {
+  border: none;
+}
 
-  .hero-section p {
-    font-family: "Montserrat", serif;
-    font-size: 1rem;
-    width: 30rem;
-    max-width: 100%;
-    color: #131313;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-    font-weight: 600;
-    line-height: 1.6;
-  }
+.hero-section p {
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  width: 30rem;
+  max-width: 100%;
+  color: #131313;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.6;
+}
 
   .hero-section .button {
     height: 2.5rem;
@@ -294,25 +294,143 @@ main {
 }
 
 
+  /* =========================
+      PRODUCTOS PRINCIPALES Y DESTACADOS
+  ========================== */
+
+  /* Título de la sección */
+  .principal-products h2,.Featured-Products h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+  }
+
+
+  .principal-products {
+        
+          background: linear-gradient(
+        135deg,
+        #000000 0%,
+        #050403 25%,
+        #171207 40%,
+        #3a290c 50%,
+        #6b4d13 60%,
+        #9c741c 72%,
+        #c9a135 85%,
+        #a67c22 100%
+    );
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  
+  }
 
 
 
+  .Featured-Products {
 
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 
+/* Carrusel propio de Productos Principales y Destacados */
+.carrusel-visor {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 1rem auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
+/* Fila continua de imágenes: se desplaza de a una */
+.carrusel-pista {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  transition: transform 0.6s ease;
+}
 
+.carrusel-pista > a {
+  flex: 0 0 33.333%;
+  width: 33.333%;
+  height: 260px;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+  display: block;
+}
 
+.carrusel-pista > a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: transparent;
+}
 
+.carrusel-flecha {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(181, 152, 84, 0.15);
+  border: 1px solid #b59854;
+  border-radius: 50%;
+  color: #cba135;
+  cursor: pointer;
+  padding: 8px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
 
+.carrusel-flecha:hover {
+  background-color: #b59854;
+  color: #131313;
+}
 
+/* Tablet: se ven 2 imágenes a la vez */
+@media screen and (max-width: 991px) {
+  .carrusel-visor {
+    max-width: 600px;
+  }
 
-/* Título de la sección */
-section h2 {
-  color: white;
-  text-align: center;
-  margin-bottom: 1rem;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  .carrusel-pista > a {
+    flex: 0 0 50%;
+    width: 50%;
+    height: 240px;
+  }
+}
+
+/* Celular: se ve 1 imagen a la vez */
+@media screen and (max-width: 767px) {
+  .carrusel-visor {
+    max-width: 320px;
+    gap: 0.35rem;
+  }
+
+  .carrusel-pista > a {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 220px;
+  }
+
+  .carrusel-flecha {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
 }
 
 /* Cuadrícula contenedora de productos */
@@ -589,9 +707,9 @@ section h2 {
     overflow: hidden;
     border: 0;
     border-radius: 0;
-}
+  }
 
-.hero-image {
+  .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -601,7 +719,7 @@ section h2 {
     left: 0;
   }
 
-.hero-section.left {
+  .hero-section.left {
     position: relative;
     z-index: 2;
     width: 80%;
@@ -611,35 +729,31 @@ section h2 {
     padding: 1rem;
     height: 80%;
     margin-left: 1rem;
-}
+  }
 
-.hero-section h1 {
-  font-size: 2.5rem;
-}
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
 
-.hero-section h3 {
-  font-size: 0.8rem;
-}
+  .hero-section h3 {
+    font-size: 0.8rem;
+  }
 
+  .hero-section hr {
+    border: none;
+  }
 
-.hero-section hr {
-  border: none;
-}
+  .hero-section p {
+    font-size: 0.8rem;
+    width: 20rem;
+    font-weight: 600;
+  }
 
-.hero-section p {
-  font-size: 0.8rem;
-  width: 20rem;
-  font-weight: 600;
-}
+  .hero-section button {
+    height: 2rem;
+    width: 10rem;
+  }
 
-.hero-section button {
-  height: 2rem;
-  width: 10rem;
-}
-
-  
-  
-  
   section {
     margin: 1rem 0.75rem;
     padding: 1rem;
