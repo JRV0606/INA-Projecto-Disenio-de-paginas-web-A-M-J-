@@ -178,7 +178,7 @@ function crearTarjetaCatalogo(producto) {
   tarjeta.innerHTML = `
         <a href="Detalle_Producto.html?id=${producto.id}">
             <img
-                src="../Multimedia/Img/${producto.imagen}"
+                src="../Multimedia/Img/Productos/${producto.imagen}"
                 alt="${producto.nombreCorto}"
                 width="200"
                 height="200"
