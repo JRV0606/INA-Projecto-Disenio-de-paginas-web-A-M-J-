@@ -88,6 +88,9 @@ body{
     padding: 1rem 1.5rem; /* 1rem arriba/abajo y 1.5rem de "aire" a los lados */
     width: 100%;
     box-sizing: border-box; /* Evita que el padding genere scroll horizontal */
+
+
+  
   }
 
   /*Contenedor(nav) Padre del botton y el ul*
@@ -466,24 +469,34 @@ body{
 
   /*El logo que es más grande para escritorio*/
   .header-logo img {
-    width: 10.5rem;
-    height: 10.5rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   /*El contenedor (header) */
   .main-header {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Mantiene logo a la izq y nav a la der */
-    max-width: 1300px;              /* Límite para que no se desparrame en pantallas gigantes */
+    justify-content: center !important; /* Mantiene logo a la izq y nav a la der */
+                  /* Límite para que no se desparrame en pantallas gigantes */
     margin: 0 auto !important;     /* Centra todo el header en la pantalla */
-    padding: 1.5rem 3rem !important;/* Da buen espacio/padding a los lados */
+
+
+
+    position: sticky; /*Para que se quede fijo el menu*/
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+    width: 100%;
+
+    
   }
 
   /*Configuración general de los íconos*/
   .bi-house-door, .fa-solid, .bi-question-circle, .bi-person, .bi-envelope {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
 
@@ -492,7 +505,7 @@ body{
 
   .header-nav {
     position: static;
-    width: 100%;
+    
     height: auto;
     background: transparent;
     box-shadow: none;
@@ -508,6 +521,10 @@ body{
     opacity: 1;
     visibility: visible;
     transform: none;
+
+    text-align: center;
+
+    width: auto;
   }
 
   /*Es el contenedor (ul)*/
@@ -532,7 +549,7 @@ body{
   /*Estilo de los botones en escritorio*/
   .nav-link {
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 600;
     padding: 0.5rem 0.5rem;
     border-radius: 1.25rem;

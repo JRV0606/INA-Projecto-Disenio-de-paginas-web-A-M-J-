@@ -4,6 +4,7 @@ main {
   width: 100% !important;
 }
 
+/* Toda esta parte es del hero-section */
 .hero-section {
   width: 100%;
   height: 500px;
@@ -70,41 +71,273 @@ main {
   line-height: 1.6;
 }
 
-.hero-section button {
-  height: 2.5rem;
-  width: 12rem;
-  font-family: "Cormorant Garamond", serif;
+  .hero-section .button {
+    height: 2.5rem;
+    width: 12rem;
+    font-family: "Cormorant Garamond", serif;
+    color: #131313;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
+    border: none;
+    border-radius: 9px;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-section .button:hover {
+    transform: translateX(5px);
+    filter: brightness(1.08);
+    box-shadow: 0 5px 15px rgba(203, 161, 53, 0.35);
+  }
+
+  /* =========================
+  SECCIÓN DE BENEFICIOS
+========================= */
+
+.benefits {
+  width: 100%;
+  margin: 0;
+  padding: 1.2rem 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+
+  background-color: #2b292693;
   color: #131313;
+
+  border: none;
+  border-radius: 0;
+}
+
+
+/* Cada beneficio */
+.benefit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  min-height: 70px;
+  padding: 0 1.5rem;
+
+  border-right: 1px solid #d8d0c0;
+}
+
+
+/* Quitamos el borde del último beneficio */
+.benefit:last-child {
+  border-right: none;
+}
+
+
+/* Iconos */
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #b59854 !important;
+  font-size: 1.8rem;
+
+  min-width: 40px;
+}
+
+
+/* Título */
+.benefit h3 {
+  margin: 0 0 0.3rem;
+
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 0.90rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
-  border-width: 1.5px;
-  transition: all 0.3s ease;
+
+  color: #b59854;
 }
 
-.hero-section button:hover {
-  transform: translateX(5px);
-  filter: brightness(1.08);
-  box-shadow: 0 5px 15px rgba(203, 161, 53, 0.35);
-}
 
-/* Contenedor principal de la sección */
-section {
-  /* margin: 30px; */
-  padding: 20px;
-  border: 3px solid #b59854;
+/* Descripción */
+.benefit p {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.65rem;
+  line-height: 1.4;
+
   color: white;
-  background-color: #131313;
-  border-radius: 12px;
 }
+
+
+/* =========================
+  CATEGORÍAS
+========================= */
+
+.categories {
+  width: 100%;
+  margin: 0;
+  padding: 2.5rem 4rem 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  background-color: black;
+
+  border: none;
+  border-radius: 0;
+}
+
 
 /* Título de la sección */
-section h2 {
-  color: white;
+.categories h2 {
+
+  grid-column: 1 / -1;
+
   text-align: center;
-  margin-bottom: 1rem;
+
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: 1rem;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #b59854;
+
+  margin-bottom: 0.5rem;
 }
+
+
+/* Cada categoría */
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+
+  
+
+  color:white;
+}
+
+
+/* Imagen */
+.category img {
+  width: 100%;
+  height: 220px;
+
+  display: block;
+
+  object-fit: cover;
+
+
+}
+
+
+/* Contenedor del texto */
+.category-content {
+  position: static;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 0.7rem;
+
+  color: #131313;
+}
+
+
+/* Nombre */
+.category-content h2 {
+  margin: 1;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 0.90rem;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: white;
+
+  text-align: center;
+}
+
+
+/* Descubrir */
+.category-content span {
+  margin-top: 0.25rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.69rem;
+  letter-spacing: 1px;
+
+  color: #8d6e2f;
+
+}
+
+
+/* Efecto al pasar el mouse */
+.category:hover img {
+  transform: scale(1.03);
+}
+
+
+.category:hover .category-content span {
+  color: #b59854;
+}
+
+
+  /* =========================
+      PRODUCTOS PRINCIPALES Y DESTACADOS
+  ========================== */
+
+  /* Título de la sección */
+  .principal-products h2,.Featured-Products h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+  }
+
+
+  .principal-products {
+        
+          background: linear-gradient(
+        135deg,
+        #000000 0%,
+        #050403 25%,
+        #171207 40%,
+        #3a290c 50%,
+        #6b4d13 60%,
+        #9c741c 72%,
+        #c9a135 85%,
+        #a67c22 100%
+    );
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  
+  }
+
+
+
+  .Featured-Products {
+
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 
 /* Carrusel propio de Productos Principales y Destacados */
 .carrusel-visor {
@@ -234,8 +467,239 @@ section h2 {
   font-family: "Montserrat", sans-serif;
 }
 
+
+/* =========================
+  NUESTRA ESENCIA
+========================= */
+
+.about {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background-color: #363431;
+
+  border: none;
+  border-radius: 0;
+
+  color: #131313;
+}
+
+
+/* CONTENIDO */
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 4rem 5rem;
+}
+
+
+/* Texto pequeño superior */
+
+.about-content .small-title {
+  margin: 0 0 0.8rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #b59854;
+}
+
+
+/* Título */
+
+.about-content h2 {
+  margin: 0 0 1rem;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 3rem;
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  text-align: left;
+
+  color: white;
+}
+
+
+/* Descripción */
+
+.about-content p:not(.small-title) {
+  width: 90%;
+  max-width: 500px;
+
+  margin: 0 0 1.5rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.85rem;
+  line-height: 1.6;
+
+  color: white;
+}
+
+
+/* Botón */
+
+.about-content .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 12rem;
+  height: 2.5rem;
+
+  padding: 0;
+
+  background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
+
+  color: black;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border: none;
+
+}
+
+
+/* Hover del botón */
+
+.about-content .btn:hover {
+  
+  transform: translateX(5px);
+}
+
+
+/* IMAGEN */
+
+.about-image {
+  width: 100%;
+  height: 100%;
+
+  min-height: 400px;
+
+  overflow: hidden;
+}
+
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.5s ease;
+}
+
+
+/* Efecto de imagen */
+
+.about:hover .about-image img {
+  transform: scale(1.02);
+}
+
+
+/* =========================
+  GUÍA DE FRAGANCIAS (FINDER)
+========================= */
+
+.finder{
+    width: 100%;
+    margin: 0;
+    padding: 2rem 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        90deg,
+        #d2a14a 0%,
+        #e5c16d 35%,
+        #f0d58a 50%,
+        #e5c16d 65%,
+        #c9963c 100%
+    );
+}
+
+
+.finder-content h2{
+    margin: 0 0 .5rem;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+
+    color: #22170d;
+}
+
+.finder-content p{
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    line-height: 1.6;
+
+    color: #3b2d1b;
+}
+
+/* Botón */
+.finder .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 2rem;
+    height: 52px;
+
+    background: #111;
+    color: #f5e7cb;
+
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    border-radius: 4px;
+    
+    margin-left: 3rem;
+}
+
+.finder .btn:hover{
+    background: #2b2b2b;
+    transform: translateY(-2px);
+}
+
+
+
+
+
 /* Reglas de diseño responsivo para pantallas de hasta 767px */
 @media screen and (max-width: 767px) {
+
+  /* Toda esta parte es del hero-section */
+
   .hero-section {
     width: 100%;
     height: 350px;
@@ -303,4 +767,193 @@ section h2 {
   .product-item img {
     max-width: 240px;
   }
+
+    /* =========================
+    SECCIÓN DE BENEFICIOS
+    ========================= */
+
+  
+  .benefits {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 0.8rem 0.5rem;
+
+    gap: 0;
+  }
+
+
+  .benefit {
+    min-height: 75px;
+
+    padding: 0.7rem 0.5rem;
+
+    gap: 0.5rem;
+
+    border-right: 1px solid #d8d0c0;
+    border-bottom: 1px solid #d8d0c0;
+  }
+
+
+  /* Quitamos borde derecho de los elementos 2 y 4 */
+  .benefit:nth-child(2),
+  .benefit:nth-child(4) {
+    border-right: none;
+  }
+
+
+  /* Quitamos borde inferior de los elementos 3 y 4 */
+  .benefit:nth-child(3),
+  .benefit:nth-child(4) {
+    border-bottom: none;
+  }
+
+
+  .benefit-icon {
+    min-width: 30px;
+    font-size: 1.4rem;
+  }
+
+
+  .benefit h3 {
+    font-size: 0.6rem;
+  }
+
+
+  .benefit p {
+    font-size: 0.55rem;
+  }
+
+  /* =========================
+  CATEGORÍAS
+========================= */
+
+
+  .categories {
+    padding: 2rem 1rem;
+
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+
+  .categories::before {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+  .category img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+  }
+
+
+  .category-content h2 {
+    font-size: 0.8rem;
+  }
+
+
+  .category-content span {
+    font-size: 0.55rem;
+  }
+
+  /* =========================
+  NUESTRA ESENCIA
+  ========================= */
+
+    .about {
+    grid-template-columns: 1fr;
+  }
+
+
+  .about-content {
+    padding: 2.5rem 1.5rem;
+  }
+
+
+  .about-content .small-title {
+    font-size: 0.6rem;
+  }
+
+
+  .about-content h2 {
+    font-size: 2rem;
+
+    line-height: 1.1;
+  }
+
+
+  .about-content p:not(.small-title) {
+    width: 100%;
+
+    font-size: 0.75rem;
+  }
+
+
+  .about-content .btn {
+    width: 11rem;
+    height: 2.3rem;
+
+    font-size: 0.6rem;
+  }
+
+
+  .about-image {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  /* =========================
+  FINDER RESPONSIVE
+========================= */
+
+  .finder{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .finder-content{
+        width: 100%;
+    }
+
+    .finder-content h2{
+        font-size: 2rem;
+        line-height: 1.1;
+        text-align: left;
+        margin-bottom: .8rem;
+    }
+
+    .finder-content p{
+        font-size: .9rem;
+        line-height: 1.6;
+        width: 90%;
+    }
+
+    .finder .btn{
+        width: auto;        /* Ya no ocupa toda la pantalla */
+        min-width: 230px;
+        padding: 0;
+        height: 48px;
+        font-size: .72rem;
+        align-self: center;   /* Centrado */
+        margin: 0;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

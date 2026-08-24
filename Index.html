@@ -76,55 +76,182 @@
   <!-- Contenido principal (Main)-->
   <main>
 
-    <section class="hero-section">
+      <section class="hero-section">
 
-      <section class="left hero-section">
+        <section class="left hero-section">
+          
+                  <h3>TU ESENCIA, TU HISTORIA</h3>
+                  <h1>Fragancias que <hr> dejan <strong>huella</strong> </h1>
+                  <p>Perfumes originales seleccionados para acompañar cada versión de ti</p>
+                  
+                  <a href="Paginas/Catalogo_Productos.html" class="button">
+                      VER CATÁLOGO
+                  </a>
 
-        <h3>TU ESENCIA, TU HISTORIA</h3>
-        <h1>Fragancias que
-          <hr> dejan <strong>huella</strong>
-        </h1>
-        <p>Perfumes originales selecciondos para acompañar cada versión de ti</p>
-        <button>
-          VER CATÁLOGO
-        </button>
+        </section>
+
+        <img src="../Multimedia/heroSectionIndice.png" alt="" class="hero-image right">
 
       </section>
 
-      <img src="Multimedia/heroSectionIndice.png" alt="" class="hero-image right">
+      <!-- =========================
+            BENEFICIOS
+        ========================== -->
+        <section class="benefits">
 
-    </section>
+            <article class="benefit">
+                <div class="benefit-icon"><i class="bi bi-clipboard-check"></i></div>
+
+                <div>
+                    <h3>PRODUCTOS 100% ORIGINALES</h3>
+                    <p>Garantía de autenticidad en cada compra.</p>
+                </div>
+            </article>
 
 
-    <section class="principal-products">
-      <!-- Sección de productos principales-->
-      <h2>Productos Principales</h2>
+            <article class="benefit">
+                <div class="benefit-icon"><i class="bi bi-truck"></i></div>
 
-      <div class="carrusel-visor" id="carruselPrincipales" data-intervalo="4000">
-        <button class="carrusel-flecha carrusel-prev" type="button" aria-label="Anterior">
-          <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
+                <div>
+                    <h3>ENVÍOS A TODO EL PAÍS</h3>
+                    <p>Rápidos, seguros y con seguimiento.</p>
+                </div>
+            </article>
 
-        <!-- Las imagenes las llena Java/index.js, leyendo los -->
-        <!-- productos con principal:true en Java/productos.js -->
-        <div class="carrusel-pista"></div>
 
-        <button class="carrusel-flecha carrusel-next" type="button" aria-label="Siguiente">
-          <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 6 15 12 9 18"></polyline>
-          </svg>
-        </button>
-      </div>
+            <article class="benefit">
+                <div class="benefit-icon"><i class="bi bi-lock"></i></div>
 
-      <div class="product-container"></div>
-    </section>
+                <div>
+                    <h3>COMPRA SEGURA</h3>
+                    <p>Protegemos tus datos y tu compra.</p>
+                </div>
+            </article>
+
+
+            <article class="benefit">
+                <div class="benefit-icon"><i class="bi bi-whatsapp"></i></div>
+
+                <div>
+                    <h3>ATENCIÓN PERSONALIZADA</h3>
+                    <p>Estamos aquí para ayudarte.</p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- =========================
+            CATEGORÍAS
+        ========================== -->
+        <section class="categories">
+
+          <h2>NUESTRAS COLECCIONES</h2>
+
+            <a href="#" class="category">
+                <img src="Multimedia\pexels-mir-fialkova-2156588206-35824747.jpg" alt="Perfumes femeninos">
+
+                <div class="category-content">
+                    <h2>FEMENINOS</h2>
+                    <span>DESCUBRE →</span>
+                </div>
+            </a>
+
+
+            <a href="#" class="category">
+                <img src="Multimedia\pexels-mehmetakifarts-33376721.jpg" alt="Perfumes masculinos">
+
+                <div class="category-content">
+                    <h2>MASCULINOS</h2>
+                    <span>DESCUBRE →</span>
+                </div>
+            </a>
+
+
+            <a href="#" class="category">
+                <img src="Multimedia\pexels-yoendry-14736081.jpg" alt="Perfumes unisex">
+
+                <div class="category-content">
+                    <h2>UNISEX</h2>
+                    <span>DESCUBRE →</span>
+                </div>
+            </a>
+
+        </section>
+
+        <!-- =========================
+            PRODUCTOS PRINCIPALES
+        ========================== -->
+
+
+        <section class="principal-products">
+
+          <h2>PRODUCTOS PRINCIPALES</h2>
+
+          <div class="carrusel-visor" id="carruselPrincipales" data-intervalo="4000">
+            <button class="carrusel-flecha carrusel-prev" type="button" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Las imagenes las llena Java/index.js, leyendo los -->
+            <!-- productos con principal:true en Java/productos.js -->
+            <div class="carrusel-pista"></div>
+
+            <button class="carrusel-flecha carrusel-next" type="button" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 6 15 12 9 18"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <div class="product-container"></div>
+      </section>
+
+
+      <!-- =========================
+            NUESTRA ESENCIA
+        ========================== -->
+        <section class="about">
+
+            <div class="about-content">
+
+                <p class="small-title">NUESTRA ESENCIA</p>
+
+                <h2>
+                    Más que perfumes,
+                    <br>
+                    creamos experiencias
+                </h2>
+
+                <p>
+                    Seleccionamos cuidadosamente cada fragancia
+                    para que encuentres la que mejor te represente.
+                </p>
+
+                <a href="../Paginas/Informacion.html" class="btn">
+                    CONOCE NUESTRA HISTORIA
+                </a>
+
+            </div>
+
+
+            <div class="about-image">
+                <img src="Multimedia\pexels-nastyasensei-66707-954405.jpg" alt="Imagen nuestra historia">
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+            PRODUCTOS DESTACADOS
+        ========================== -->
+
 
     <section class="Featured-Products" id="productos-destacados">
-      <h2>Productos Destacados</h2>
+      <h2>PRODUCTOS DESTACADOS</h2>
 
       <div class="carrusel-visor" id="carruselDestacados" data-intervalo="4000">
         <button class="carrusel-flecha carrusel-prev" type="button" aria-label="Anterior">
@@ -146,133 +273,163 @@
         </button>
       </div>
     </section>
+
+
+        <!-- =========================
+            DIRIGIR A GUIA DE FRAGANCIAS
+        ========================== -->
+        <section class="finder">
+
+            <div class="finder-content">
+
+                <h2>¿Aún no sabes cuál elegir?</h2>
+
+                <p>
+                    Encuentra tu aroma ideal según tu personalidad
+                    y estilo de vida.
+                </p>
+
+            </div>
+
+            <a href="../Paginas/Guia_fragancias.html" class="btn ">
+                EXPLORAR GUÍA DE FRAGANCIAS
+            </a>
+
+            
+
+        </section>
+
   </main>
 
-  <!--------------------------------------------------------->
-  <!-------------------PIE DE LA PÁGINA---------------------->
-  <!--------------------------------------------------------->
+    <!--------------------------------------------------------->
+    <!-------------------PIE DE LA PÁGINA---------------------->
+    <!--------------------------------------------------------->
 
-  <footer>
-    <!-- Logo de la marca -->
-    <img class="logo" src="Multimedia/Img/Logo_Celestial_Woods.png" alt="Logo Celestial & Woods" />
+    <footer>
+      <!-- Logo de la marca -->
+      <img
+        class="logo"
+        src="Multimedia/Img/Logo_Celestial_Woods.png"
+        alt="Logo Celestial & Woods"
+      />
 
-    <section class="footer-menu">
-      <h3>Menú Navegación</h3>
-      <ul class="nav-list-footer">
-        <li class="nav-item-footer">
-          <a href="#" class="nav-link-footer active"> Inicio</a>
-        </li>
-        <li class="nav-item-footer">
-          <a href="Paginas/Catalogo_Productos.html" class="nav-link-footer">
-            Catálogo</a>
-        </li>
-        <li class="nav-item-footer">
-          <a href="Paginas/Guia_fragancias.html" class="nav-link-footer">
-            Guía de Fragancias</a>
-        </li>
-        <li class="nav-item-footer">
-          <a href="Paginas/Preguntas.html" class="nav-link-footer">
-            Preguntas Frecuentes</a>
-        </li>
-        <li class="nav-item-footer">
-          <a href="Paginas/Informacion.html" class="nav-link-footer">
-            Quienes somos</a>
-        </li>
-        <li class="nav-item-footer">
-          <a href="Paginas/Contacto.html" class="nav-link-footer">
-            Contacto</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="footer-social">
-      <h3>Síguenos</h3>
-
-      <nav aria-label="Redes sociales">
-        <a href="https://www.facebook.com/share/1H3A6cKN8u/" class="social-icon" target="_blank" rel="noopener">
-          <i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/celestial_woods_?igsi=bzFpeXpoeDBkMzht" class="social-icon" target="_blank"
-          rel="noopener">
-          <i class="bi bi-instagram"></i></a>
-        <a href="https://www.tiktok.com/@celestial_woods?_r=1&_t=ZS-996cXlFkd6O" class="social-icon" target="_blank"
-          rel="noopener"><i class="bi bi-tiktok"></i></a>
-      </nav>
-    </section>
-
-    <!-- Compra por WhatsApp -->
-    <section class="footer-whatsapp">
-      <i class="bi bi-whatsapp"></i>
-
-      <div class="left">
-        <h3>Compra por WhatsApp</h3>
-        <a href="https://wa.me/50662339082?text=Hola%2C%20me%20gustaria%20obtener%20mas%20informacion%20sobre%20sus%20perfumes."
-          target="_blank" rel="noopener">
-          +506 6233 9082
-        </a>
-      </div>
-    </section>
-
-    <!-- Horarios -->
-    <section class="footer-hours">
-      <h3><i class="bi bi-clock"></i> Horario de atención</h3>
-
-      <ul>
-        <li>
-          <i class="bi bi-calendar"></i><strong> Lunes a Viernes:</strong> 8:00 a.m. - 6:00 p.m.
-        </li>
-        <li>
-          <i class="bi bi-calendar"></i><strong> Sábado:</strong> 8:00 a.m. -
-          6:00 p.m.
-        </li>
-        <li>
-          <i class="bi bi-calendar"></i><strong> Domingo:</strong> Cerrado
-        </li>
-      </ul>
-    </section>
-
-    <!-- Información legal -->
-    <section class="footer-legal">
-      <nav aria-label="Información legal">
-        <ul class="legal-list">
-          <li class="legal-item">
-            <a href="#" class="legal-link">
-              <span class="legal-left">
-                <i class="bi bi-shield-check"></i>
-                <span>Términos y condiciones</span>
-              </span>
-
-              <i class="bi bi-chevron-right"></i>
-            </a>
+      <section class="footer-menu">
+        <h3>Menú Navegación</h3>
+        <ul class="nav-list-footer">
+          <li class="nav-item-footer">
+            <a href="#" class="nav-link-footer active"> Inicio</a>
           </li>
-
-          <li class="legal-item">
-            <a href="#" class="legal-link">
-              <span class="legal-left">
-                <i class="bi bi-lock"></i>
-                <span>Políticas de privacidad</span>
-              </span>
-
-              <i class="bi bi-chevron-right"></i>
-            </a>
+          <li class="nav-item-footer">
+            <a href="Paginas/Catalogo_Productos.html" class="nav-link-footer">
+              Catálogo</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="Paginas/Guia_fragancias.html" class="nav-link-footer">
+              Guía de Fragancias</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="Paginas/Preguntas.html" class="nav-link-footer">
+              Preguntas Frecuentes</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="Paginas/Informacion.html" class="nav-link-footer">
+              Quienes somos</a
+            >
+          </li>
+          <li class="nav-item-footer">
+            <a href="Paginas/Contacto.html" class="nav-link-footer">
+              Contacto</a
+            >
           </li>
         </ul>
-      </nav>
-    </section>
+      </section>
 
-    <!-- Copyright -->
-    <section class="footer-copy">
-      <p>
-        &copy; 2026 Celestial & Woods. <br />
-        Todos los derechos reservados.
-      </p>
-    </section>
-  </footer>
+      <section class="footer-social">
+        <h3>Síguenos</h3>
 
-  <script src="Java/productos.js"></script>
-  <script src="Java/index.js"></script>
-  <script src="Java/main.js"></script>
-  <script src="Java/carrusel.js"></script>
-  <!--Se pone al final porque ocupa primero haber leido todo el html-->
-</body>
+        <nav aria-label="Redes sociales">
+          <a href="#" class="social-icon"> <i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"> <i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+        </nav>
+      </section>
 
+      <!-- Compra por WhatsApp -->
+      <section class="footer-whatsapp">
+        <i class="bi bi-whatsapp"></i>
+
+        <div class="left">
+          <h3>Compra por WhatsApp</h3>
+          <a href="#"> +506 6000 0000 </a>
+        </div>
+      </section>
+
+      <!-- Horarios -->
+      <section class="footer-hours">
+        <h3><i class="bi bi-clock"></i> Horario de atención</h3>
+
+        <ul>
+          <li>
+            <i class="bi bi-calendar"></i
+            ><strong> Lunes a Viernes:</strong> 8:00 a.m. - 6:00 p.m.
+          </li>
+          <li>
+            <i class="bi bi-calendar"></i><strong> Sábado:</strong> 8:00 a.m. -
+            6:00 p.m.
+          </li>
+          <li>
+            <i class="bi bi-calendar"></i><strong> Domingo:</strong> Cerrado
+          </li>
+        </ul>
+      </section>
+
+      <!-- Información legal -->
+      <section class="footer-legal">
+        <nav aria-label="Información legal">
+          <ul class="legal-list">
+            <li class="legal-item">
+              <a href="#" class="legal-link">
+                <span class="legal-left">
+                  <i class="bi bi-shield-check"></i>
+                  <span>Términos y condiciones</span>
+                </span>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </li>
+
+            <li class="legal-item">
+              <a href="#" class="legal-link">
+                <span class="legal-left">
+                  <i class="bi bi-lock"></i>
+                  <span>Políticas de privacidad</span>
+                </span>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Copyright -->
+      <section class="footer-copy">
+        <p>
+          &copy; 2026 Celestial & Woods. <br />
+          Todos los derechos reservados.
+        </p>
+      </section>
+    </footer>
+
+    <script src="Java/main.js"></script>
+    <script src="Java/productos.js"></script>
+    <script src="Java/index.js"></script>
+    <script src="Java/carrusel.js"></script>
+    <!--Se pone al final porque ocupa primero haber leido todo el html-->
+ 
+ 
+  </body>
 </html>
