@@ -128,7 +128,7 @@ const productos = [
       "Como su nombre lo sugiere, es una fragancia diseñada para brillar en la noche. Es la opción ideal para salidas de fiesta, eventos nocturnos, clubbing o citas románticas en las que se busque proyectar magnetismo y presencia. Su mejor rendimiento se da en climas frescos, fríos (otoño e invierno) o en ambientes climatizados, ya que su perfil dulzón y especiado puede resultar denso con el calor extremo. Es perfecta para un público juvenil o moderno que busque un perfume llamativo, con excelente fijación y una alta capacidad para generar cumplidos.",
     descripcion:
       "9 PM de Afnan es un eau de parfum de la familia olfativa ámbar vainilla que se ha consolidado como uno de los aromas nocturnos y seductores más populares. Su apertura es dulce y jugosa, destacando notas de manzana, canela, lavanda silvestre y un toque de bergamota; en el corazón se percibe una faceta floral limpia gracias a la flor de azahar y el lirio de los valles; finalmente, evoluciona hacia un fondo profundamente cálido, envolvente y goloso donde predominan la vainilla, el haba tonka, el ámbar y el pachulí.",
-    principal: false,
+    principal: true,
     destacado: false,
   },
   {
@@ -167,7 +167,7 @@ const productos = [
     descripcion:
       "9 PM Elixir de Afnan es una versión más densa, opulenta y concentrada del clásico 9 PM, diseñada para llevar el perfil dulce y seductor de la línea a un nivel de mayor madurez y profundidad. Su apertura equilibra la frescura aromática de la lavanda y toques cítricos con una entrada especiada de canela y cardamomo; en el corazón, desarrolla notas cálidas de miel, resinas y azahar; finalmente, se asienta sobre una base rica y sumamente adictiva de haba tonka, vainilla cremosa, ámbar, benzul y maderas oscuras.",
     principal: false,
-    destacado: false,
+    destacado: true,
   },
   {
     id: "Ombre_Dor",
@@ -268,7 +268,7 @@ const productos = [
       "Es un aroma acogedor, juguetón y puramente goloso, diseñado especialmente para amantes de las fragancias dulces que evocan la repostería fina. Debido a su perfil denso y cálido, rinde de manera sobresaliente en climas frescos o fríos (otoño e invierno), tardes de café, citas románticas casuales y salidas nocturnas informales. Es la opción ideal para quien desea destacar con un perfume reconfortante, único y con un altísimo poder para despertar curiosidad y generar cumplidos con olor a postre gourmet.",
     descripcion:
       "Armaf Delights Dubai Delicacy Kunafa Chocolate es una fragancia indulgentemente gourmand inspirada en la rica repostería de Oriente Medio y la tendencia del chocolate estilo Dubái. Su apertura es una tentación inmediata, combinando notas de chocolate de leche denso con el acorde crujiente y tostado de la masa kunafa dorada a la mantequilla; en el corazón, revela capas cremosas de crema de pistacho, avellana y un toque sutil de especias dulces; finalmente, evoluciona hacia una base cálida, adictiva y envolvente dominada por la vainilla, el haba tonka, el cacao concentrado y el ámbar.",
-    principal: false,
+    principal: true,
     destacado: false,
   },
   {
@@ -304,7 +304,7 @@ const productos = [
     descripcion:
       "Espectro Dubai Niche es una fragancia de la familia olfativa oriental amaderada con matices ambarados y especiados, caracterizada por un perfil opulento, misterioso y envolvente representativo de la perfumería de autor de Oriente Medio. En su apertura, despliega un acorde intrigante de especias finas (como azafrán y cardamomo) acompañadas de toques cítricos resplandecientes que aportan luminosidad; su corazón evoluciona hacia una faceta profunda y elegante donde destacan maderas oscuras, notas de incienso y suaves toques florales; finalmente, se asienta sobre un fondo denso, cálido y seductor de ámbar dorado, cuero, resinas, vainilla y almizcle.",
     principal: false,
-    destacado: false,
+    destacado: true,
   },
   {
     id: "Dubai_yl",
@@ -320,7 +320,7 @@ const productos = [
     descripcion:
       "YL Dubai Niche es una fragancia de la familia olfativa aromática amaderada con matices ambarados, inspirada en la alta perfumería de Oriente Medio que combina frescura moderna con una base oriental sofisticada. Su apertura proyecta una salida vibrante y limpia marcando notas de manzana, bergamota y jengibre fresco; en el corazón, desarrolla una faceta aromática y elegante dominada por la salvia, el geranio y la lavanda; finalmente, se asienta sobre un fondo cálido, duradero y masculino de madera de cedro, vetiver, haba tonka, incienso y ámbar.",
     principal: false,
-    destacado: false,
+    destacado: true,
   },
   {
     id: "Lattafa_1505",
@@ -366,7 +366,7 @@ const productos = [
     perfilUso: "#",
     descripcion: "#",
     principal: false,
-    destacado: false,
+    destacado: true,
   },
   {
     id: "Maktoub_Tonka",
@@ -398,7 +398,7 @@ const productos = [
     descripcion:
       "Sherif de Lattafa Perfumes es un eau de parfum de la familia olfativa oriental amaderada especiada que destaca por su carácter imponente, cálido y elegante. Su apertura despliega una entrada refinada con toques cítricos de bergamota, pimienta y matices aromáticos de lavanda; en el corazón, desarrolla una faceta profunda y densa donde se combinan maderas nobles como el cedro, el pachulí y un toque especiado resinoso; finalmente, evoluciona hacia una base cálida, envolvente y ligeramente ahumada dominada por el cuero, la madera de sándalo, el ámbar y la vainilla.",
     principal: false,
-    destacado: false,
+    destacado: true,
   },
   {
     id: "royal_blend_bourbon",
@@ -413,7 +413,7 @@ const productos = [
       "Este perfume está orientado principalmente a climas fríos, temporadas de otoño-invierno y eventos nocturnos, donde sus notas alcohólicas, amaderadas y especiadas despliegan todo su potencial sin saturar. Es ideal para hombres y mujeres con una personalidad fuerte, segura y madura que buscan un aroma con carácter para ocasiones especiales, citas románticas formales o salidas nocturnas exclusivas. Debido a su gran potencia y densidad (habitual en concentraciones altas), se recomienda un uso medido y brilla con especial elegancia al ser acompañado de vestimenta formal o semi-formal.",
     descripcion:
       "Royal Blend Bourbon es una fragancia intensa y sofisticada de la familia olfativa amaderada especiada, concebida como una experiencia licorosa y de alta gama. Su salida destaca por un contraste audaz y original entre notas cálidas de canela, maderas y toques especiados de menta fresca y albahaca. En su corazón se revela la nota protagonista: un acorde profundo y embriagador de whisky bourbon matizado con la elegancia limpia de la lavanda. Finalmente, su fondo sella con una base robusta y magnética de madera de roble y bálsamo del Perú, otorgándole una fijación sobresaliente y una presencia oscura, madura y muy distinguida.",
-    principal: false,
+    principal: true,
     destacado: false,
   },
 ];
