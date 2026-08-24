@@ -20,9 +20,8 @@
     ("formatearPrecioIndex") para que no choque si algun dia
     los dos archivos se cargan juntos en la misma pagina.
 */
-function formatearPrecioIndex(precio)
-{
-    return "\u20A1" + precio.toLocaleString("es-CR");
+function formatearPrecioIndex(precio) {
+  return "\u20A1" + precio.toLocaleString("es-CR");
 }
 
 /*
@@ -34,12 +33,11 @@ function formatearPrecioIndex(precio)
     <article class="product-item">, asi que el script mantiene
     la misma etiqueta para no romper el CSS que ya existia.
 */
-function crearTarjetaIndex(producto, conPrecio)
-{
-    const articulo = document.createElement("article");
-    articulo.className = "product-item";
+function crearTarjetaIndex(producto, conPrecio) {
+  const articulo = document.createElement("article");
+  articulo.className = "product-item";
 
-    /*
+  /*
         Aqui el template literal usa OTRO operador ternario,
         pero esta vez adentro del HTML:
 
@@ -63,7 +61,7 @@ function crearTarjetaIndex(producto, conPrecio)
         detalle SI necesita "Paginas/" al inicio (a diferencia
         de catalogo.js, que ya esta adentro de esa carpeta).
     */
-    articulo.innerHTML = `
+  articulo.innerHTML = `
         <a href="Paginas/Detalle_Producto.html?id=${producto.id}">
             <img
                 src="Multimedia/Img/${producto.imagen}"
@@ -76,7 +74,60 @@ function crearTarjetaIndex(producto, conPrecio)
         ${conPrecio ? `<p>Precio: ${formatearPrecioIndex(producto.precio)}</p>` : ""}
     `;
 
-    return articulo;
+  return articulo;
+}
+
+/*
+    Recibe un producto y devuelve un <a> ya armado (con su
+    <img> adentro), para usarlo dentro de la "pista" de un
+    carrusel (#carruselPrincipales o #carruselDestacados).
+
+    Se envuelve en un <a> -igual que en crearTarjetaIndex- para
+    que al hacer click en la imagen del carrusel mande directo
+    a Detalle_Producto.html con el id del producto.
+*/
+function crearImagenCarrusel(producto) {
+  const link = document.createElement("a");
+  link.href = `Paginas/Detalle_Producto.html?id=${producto.id}`;
+
+  const img = document.createElement("img");
+  img.src = `Multimedia/Img/${producto.imagen}`;
+  img.alt = producto.nombreCorto;
+
+  link.appendChild(img);
+
+  return link;
+}
+
+/*
+    Llena la "pista" de un carrusel (la fila de imagenes que se
+    mueve) con los productos que le pasemos. Recibe:
+    - idPista: el id del contenedor ".carrusel-visor" (por
+      ejemplo "carruselPrincipales")
+    - listaProductos: el arreglo de productos ya filtrado
+
+    Importante: esta funcion solo debe llamarse ANTES de que
+    corra carrusel.js (que es el que duplica las imagenes y
+    arma el auto-play), asi que en el HTML el script de este
+    archivo (index.js) tiene que ir cargado ANTES que
+    Java/carrusel.js.
+*/
+function renderizarCarrusel(idPista, listaProductos) {
+  const visor = document.getElementById(idPista);
+  if (!visor) {
+    return;
+  }
+
+  const pista = visor.querySelector(".carrusel-pista");
+  if (!pista) {
+    return;
+  }
+
+  pista.innerHTML = "";
+
+  listaProductos.forEach((producto) => {
+    pista.appendChild(crearImagenCarrusel(producto));
+  });
 }
 
 /*
@@ -88,25 +139,21 @@ function crearTarjetaIndex(producto, conPrecio)
     - listaProductos: el arreglo de productos ya filtrado
     - conPrecio: si hay que mostrar el precio o no
 */
-function renderizarSeccionIndex(selector, listaProductos, conPrecio)
-{
-    const contenedor = document.querySelector(selector);
-    if (!contenedor)
-    {
-        return;
-    }
+function renderizarSeccionIndex(selector, listaProductos, conPrecio) {
+  const contenedor = document.querySelector(selector);
+  if (!contenedor) {
+    return;
+  }
 
-    contenedor.innerHTML = "";
+  contenedor.innerHTML = "";
 
-    listaProductos.forEach((producto) =>
-    {
-        contenedor.appendChild(crearTarjetaIndex(producto, conPrecio));
-    });
+  listaProductos.forEach((producto) => {
+    contenedor.appendChild(crearTarjetaIndex(producto, conPrecio));
+  });
 }
 
-if (typeof productos !== "undefined")
-{
-    /*
+if (typeof productos !== "undefined") {
+  /*
         "filter()" es un metodo de los arreglos que crea un
         arreglo NUEVO, quedandose solo con los elementos para
         los que la funcion que le pasamos devuelve true.
@@ -122,16 +169,37 @@ if (typeof productos !== "undefined")
         Nota: el arreglo original "productos" NO se modifica.
         filter() siempre devuelve un arreglo aparte.
     */
-    const productosPrincipales = productos.filter((producto) => producto.principal);
-    const productosDestacados = productos.filter((producto) => producto.destacado);
+  const productosPrincipales = productos.filter(
+    (producto) => producto.principal,
+  );
+  const productosDestacados = productos.filter(
+    (producto) => producto.destacado,
+  );
 
-    /*
+  /*
         Aqui llamamos la funcion de renderizado dos veces: una
         para cada seccion del Index. El selector CSS combina el
         id de la seccion (agregado en el HTML) con la clase
         ".product-container" que ya existia adentro de cada
         seccion, para apuntar exactamente al div correcto.
     */
-    renderizarSeccionIndex("#productos-principales .product-container", productosPrincipales, false);
-    renderizarSeccionIndex("#productos-destacados .product-container", productosDestacados, true);
+  renderizarSeccionIndex(
+    "#productos-principales .product-container",
+    productosPrincipales,
+    false,
+  );
+  renderizarSeccionIndex(
+    "#productos-destacados .product-container",
+    productosDestacados,
+    true,
+  );
+  /*
+        Mismo filtro (principal / destacado), pero ahora para
+        llenar la fila de imagenes de cada carrusel. Como esto
+        corre ANTES de que carrusel.js duplique las imagenes
+        (ver orden de <script> en Index.html), el carrusel ya
+        arranca con los productos correctos.
+    */
+  renderizarCarrusel("carruselPrincipales", productosPrincipales);
+  renderizarCarrusel("carruselDestacados", productosDestacados);
 }
