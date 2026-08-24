@@ -64,7 +64,7 @@ function crearTarjetaIndex(producto, conPrecio) {
   articulo.innerHTML = `
         <a href="Paginas/Detalle_Producto.html?id=${producto.id}">
             <img
-                src="Multimedia/Img/${producto.imagen}"
+                src="Multimedia/Img/Productos/${producto.imagen}"
                 alt="${producto.nombreCorto}"
                 width="300"
                 height="300"
@@ -91,7 +91,7 @@ function crearImagenCarrusel(producto) {
   link.href = `Paginas/Detalle_Producto.html?id=${producto.id}`;
 
   const img = document.createElement("img");
-  img.src = `Multimedia/Img/${producto.imagen}`;
+  img.src = `Multimedia/Img/Productos/${producto.imagen}`;
   img.alt = producto.nombreCorto;
 
   link.appendChild(img);

@@ -16,9 +16,8 @@
     el texto "I.V.A.I" porque asi se mostraba el precio en la
     version original de esta pagina de detalle.
 */
-function formatearPrecioDetalle(precio)
-{
-    return "\u20A1" + precio.toLocaleString("es-CR") + " I.V.A.I";
+function formatearPrecioDetalle(precio) {
+  return "\u20A1" + precio.toLocaleString("es-CR") + " I.V.A.I";
 }
 
 /*
@@ -40,10 +39,9 @@ function formatearPrecioDetalle(precio)
     devuelve su valor como texto (en el ejemplo, "sauvage"). Si
     no existe ese parametro en la URL, devuelve null.
 */
-function obtenerIdDesdeUrl()
-{
-    const parametros = new URLSearchParams(window.location.search);
-    return parametros.get("id");
+function obtenerIdDesdeUrl() {
+  const parametros = new URLSearchParams(window.location.search);
+  return parametros.get("id");
 }
 
 /*
@@ -54,11 +52,10 @@ function obtenerIdDesdeUrl()
     "Miniatura 2...", etc). Los indices de un arreglo empiezan
     en 0, por eso se le suma 1 al mostrarlo.
 */
-function crearMiniatura(nombreArchivo, indice)
-{
-    const miniatura = document.createElement("img");
+function crearMiniatura(nombreArchivo, indice) {
+  const miniatura = document.createElement("img");
 
-    /*
+  /*
         A diferencia de innerHTML (que reemplaza TODO el
         contenido de un elemento con texto/HTML), aqui vamos
         asignando cada propiedad del elemento por separado:
@@ -66,13 +63,13 @@ function crearMiniatura(nombreArchivo, indice)
         indicado cuando el elemento es simple (una sola imagen)
         y no necesita HTML anidado adentro.
     */
-    miniatura.src = "../Multimedia/Img/" + nombreArchivo;
-    miniatura.alt = "Miniatura " + (indice + 1) + " del producto";
-    miniatura.width = 100;
-    miniatura.height = 100;
-    miniatura.className = "gallery-thumbnail";
+  miniatura.src = "../Multimedia/Img/Productos/" + nombreArchivo;
+  miniatura.alt = "Miniatura " + (indice + 1) + " del producto";
+  miniatura.width = 100;
+  miniatura.height = 100;
+  miniatura.className = "gallery-thumbnail";
 
-    return miniatura;
+  return miniatura;
 }
 
 /*
@@ -80,9 +77,8 @@ function crearMiniatura(nombreArchivo, indice)
     No recibe parametros porque toma los datos directamente de
     la URL y del arreglo "productos".
 */
-function renderizarDetalle()
-{
-    /*
+function renderizarDetalle() {
+  /*
         Doble proteccion antes de seguir:
         1. Que "productos" exista (que productos.js si se haya
            cargado).
@@ -96,14 +92,13 @@ function renderizarDetalle()
         dos condiciones dentro del if separadas por "||", que
         se cumple si CUALQUIERA de las dos es verdadera.
     */
-    if (typeof productos === "undefined" || productos.length === 0)
-    {
-        return;
-    }
+  if (typeof productos === "undefined" || productos.length === 0) {
+    return;
+  }
 
-    const id = obtenerIdDesdeUrl();
+  const id = obtenerIdDesdeUrl();
 
-    /*
+  /*
         "find()" es un metodo de los arreglos parecido a
         filter(), pero en vez de devolver TODOS los elementos
         que cumplen la condicion, devuelve SOLO EL PRIMERO que
@@ -124,64 +119,61 @@ function renderizarDetalle()
         usamos "productos[0]" (el primer producto del arreglo)
         para que la pagina nunca se quede vacia.
     */
-    const producto = productos.find((item) => item.id === id) || productos[0];
+  const producto = productos.find((item) => item.id === id) || productos[0];
 
-    /*
+  /*
         Buscamos todos los elementos del HTML que vamos a
         llenar. Estos ids se agregaron a mano en
         Detalle_Producto.html junto a este cambio.
     */
-    const breadcrumb = document.querySelector("#breadcrumb-producto");
-    const nombre = document.querySelector("#nombre-producto");
-    const precio = document.querySelector("#precio-producto");
-    const perfilUso = document.querySelector("#perfil-uso-producto");
-    const descripcion = document.querySelector("#descripcion-producto");
-    const imagenPrincipal = document.querySelector("#imagen-principal-producto");
-    const galeria = document.querySelector("#galeria-producto");
-    const whatsapp = document.querySelector("#whatsapp-producto");
+  const breadcrumb = document.querySelector("#breadcrumb-producto");
+  const nombre = document.querySelector("#nombre-producto");
+  const precio = document.querySelector("#precio-producto");
+  const perfilUso = document.querySelector("#perfil-uso-producto");
+  const descripcion = document.querySelector("#descripcion-producto");
+  const imagenPrincipal = document.querySelector("#imagen-principal-producto");
+  const galeria = document.querySelector("#galeria-producto");
+  const whatsapp = document.querySelector("#whatsapp-producto");
 
-    /*
+  /*
         Cada linea revisa primero que el elemento exista (con
         el "if" corto de una sola linea) antes de intentar
         cambiar su texto, para que el script no se rompa si en
         algun momento se borra alguno de estos ids del HTML por
         error.
     */
-    if (breadcrumb) breadcrumb.textContent = producto.nombreCorto;
-    if (nombre) nombre.textContent = producto.nombreCompleto;
-    if (precio) precio.textContent = formatearPrecioDetalle(producto.precio);
-    if (perfilUso) perfilUso.textContent = "Perfil de uso: " + producto.perfilUso;
-    if (descripcion) descripcion.textContent = producto.descripcion;
+  if (breadcrumb) breadcrumb.textContent = producto.nombreCorto;
+  if (nombre) nombre.textContent = producto.nombreCompleto;
+  if (precio) precio.textContent = formatearPrecioDetalle(producto.precio);
+  if (perfilUso) perfilUso.textContent = "Perfil de uso: " + producto.perfilUso;
+  if (descripcion) descripcion.textContent = producto.descripcion;
 
-    if (imagenPrincipal)
-    {
-        imagenPrincipal.src = "../Multimedia/Img/" + producto.imagen;
-        imagenPrincipal.alt = "Imagen principal de " + producto.nombreCorto;
-    }
+  if (imagenPrincipal) {
+    imagenPrincipal.src = "../Multimedia/Img/Productos/" + producto.imagen;
+    imagenPrincipal.alt = "Imagen principal de " + producto.nombreCorto;
+  }
 
-    if (galeria)
-    {
-        /*
+  if (galeria) {
+    /*
             Vaciamos la galeria antes de llenarla, para borrar
             las miniaturas fijas que traia el HTML original
             (las de "Sauvage") antes de meter las del producto
             que corresponda.
         */
-        galeria.innerHTML = "";
+    galeria.innerHTML = "";
 
-        /*
+    /*
             "forEach" con DOS parametros: el primero es el
             elemento actual del arreglo (archivo), el segundo
             es la posicion en la que va (indice). JavaScript
             se lo entrega automaticamente en ese orden.
         */
-        producto.galeria.forEach((archivo, indice) =>
-        {
-            galeria.appendChild(crearMiniatura(archivo, indice));
-        });
-    }
+    producto.galeria.forEach((archivo, indice) => {
+      galeria.appendChild(crearMiniatura(archivo, indice));
+    });
+  }
 
-    /*
+  /*
         Armamos el link de WhatsApp con un mensaje ya escrito,
         que incluye el nombre del producto que se esta viendo,
         para que la persona que compra no tenga que escribir
@@ -199,11 +191,11 @@ function renderizarDetalle()
         espacios ni simbolos, con el codigo de pais (506)
         pegado adelante.
     */
-    if (whatsapp)
-    {
-        const mensaje = "Hola, me interesa el producto: " + producto.nombreCorto;
-        whatsapp.href = "https://wa.me/50662339082?text=" + encodeURIComponent(mensaje);
-    }
+  if (whatsapp) {
+    const mensaje = "Hola, me interesa el producto: " + producto.nombreCorto;
+    whatsapp.href =
+      "https://wa.me/50662339082?text=" + encodeURIComponent(mensaje);
+  }
 }
 
 /*
