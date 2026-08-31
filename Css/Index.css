@@ -22,6 +22,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0.6;
+  filter: brightness(100%);
 }
 
 .hero-section.left {
@@ -47,12 +49,13 @@ main {
 
 .hero-section h3 {
   font-family: "Montserrat", serif;
-  color: #b59854;
+  color: #e5a308d6;
   font-size: 1.1rem;
+  
 }
 
 .hero-section strong {
-  color: #b59854;
+  color: #e5a308d6;
 }
 
 .hero-section hr {
@@ -74,17 +77,18 @@ main {
   .hero-section .button {
     height: 2.5rem;
     width: 12rem;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Montserrat", serif;
     color: #131313;
     font-weight: 700;
     background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
     border: none;
-    border-radius: 9px;
+    border-radius: 0.5rem;
     text-decoration: none;
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
+    font-size: 0.75rem;
   }
 
   .hero-section .button:hover {
@@ -141,7 +145,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  color: #b59854 !important;
+  color: #e5a308d6 !important;
   font-size: 1.8rem;
 
   min-width: 40px;
@@ -156,7 +160,7 @@ main {
   font-size: 0.90rem;
   font-weight: 700;
 
-  color: #b59854;
+  color: #e5a308d6;
 }
 
 
@@ -179,7 +183,8 @@ main {
 .categories {
   width: 100%;
   margin: 0;
-  padding: 2.5rem 4rem 3rem;
+
+  padding: 3rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,7 +210,7 @@ main {
 
   letter-spacing: 2px;
 
-  color: #b59854;
+  color: #e5a308d6;
 
   margin-bottom: 0.5rem;
 }
@@ -219,8 +224,6 @@ main {
 
   text-decoration: none;
 
-  
-
   color:white;
 }
 
@@ -233,7 +236,7 @@ main {
   display: block;
 
   object-fit: cover;
-
+  border-radius: 1rem;
 
 }
 
@@ -278,7 +281,7 @@ main {
   font-size: 0.69rem;
   letter-spacing: 1px;
 
-  color: #8d6e2f;
+  color: #e5a308d6;
 
 }
 
@@ -314,7 +317,7 @@ main {
 
   .principal-products {
         
-          background: linear-gradient(
+      background: linear-gradient(
         135deg,
         #000000 0%,
         #050403 25%,
@@ -326,8 +329,8 @@ main {
         #a67c22 100%
     );
 
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   
   }
 
@@ -335,8 +338,8 @@ main {
 
   .Featured-Products {
 
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
 /* Carrusel propio de Productos Principales y Destacados */
@@ -387,7 +390,7 @@ main {
   background: rgba(181, 152, 84, 0.15);
   border: 1px solid #b59854;
   border-radius: 50%;
-  color: #cba135;
+  color: #e5a308d6;
   cursor: pointer;
   padding: 8px;
   transition:
@@ -397,7 +400,7 @@ main {
 
 .carrusel-flecha:hover {
   background-color: #b59854;
-  color: #131313;
+  color: #131313; 
 }
 
 /* Tablet: se ven 2 imágenes a la vez */
@@ -511,7 +514,7 @@ main {
 
   letter-spacing: 2px;
 
-  color: #b59854;
+  color: #e5a308d6;
 }
 
 
@@ -543,7 +546,7 @@ main {
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 0.85rem;
+  font-size: 1rem;
   line-height: 1.6;
 
   color: white;
@@ -557,7 +560,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  width: 12rem;
+  width: 14rem;
   height: 2.5rem;
 
   padding: 0;
@@ -568,12 +571,12 @@ main {
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
 
   text-decoration: none;
 
-  border: none;
+  border-radius: 0.5rem;
 
 }
 
@@ -657,10 +660,10 @@ main {
     margin: 0;
 
     font-family: "Montserrat", sans-serif;
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 1.6;
 
-    color: #3b2d1b;
+    color: black;
 }
 
 /* Botón */
@@ -673,15 +676,15 @@ main {
     height: 52px;
 
     background: #111;
-    color: #f5e7cb;
+    color: white;
 
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
-    font-size: .75rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     letter-spacing: 1px;
 
-    border-radius: 4px;
+    border-radius: 0.5rem;
     
     margin-left: 3rem;
 }
@@ -696,13 +699,13 @@ main {
 
 
 /* Reglas de diseño responsivo para pantallas de hasta 767px */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 950px) {
 
   /* Toda esta parte es del hero-section */
 
   .hero-section {
     width: 100%;
-    height: 350px;
+    height: auto;
     position: relative;
     overflow: hidden;
     border: 0;
@@ -712,8 +715,8 @@ main {
   .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 89% center;
+    object-fit: left;
+    object-position: 40%;
     position: absolute;
     top: 0;
     left: 0;
@@ -896,6 +899,7 @@ main {
     height: 2.3rem;
 
     font-size: 0.6rem;
+    
   }
 
 
@@ -930,12 +934,13 @@ main {
         font-size: .9rem;
         line-height: 1.6;
         width: 90%;
+        text-align: center;
     }
 
     .finder .btn{
         width: auto;        /* Ya no ocupa toda la pantalla */
         min-width: 230px;
-        padding: 0;
+        
         height: 48px;
         font-size: .72rem;
         align-self: center;   /* Centrado */
