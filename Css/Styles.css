@@ -76,7 +76,7 @@ body{
 
   /*Configuración general de los íconos*/
   .bi-house-door, .fa-solid, .bi-question-circle, .bi-person, .bi-envelope {
-    color: #d4b483;
+    color: #e5a308d6;
     font-size: 1.2rem;
   }
 
@@ -165,7 +165,7 @@ body{
 
   /*Contenedor (a) para manejar lo que está dentro el texto. Padre de los textos*/
   .nav-link {
-    color: #d4b483;
+    color: #e5a308d6;
     text-decoration: none; /*Para quitarle los puntos y raya*/
     font-size: 1rem;
     font-weight: 600;
