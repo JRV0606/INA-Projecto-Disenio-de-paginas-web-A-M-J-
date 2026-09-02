@@ -16,11 +16,7 @@ html {
   scroll-behavior: smooth; /* Desplaza la página de forma suave hacia una sección en lugar de saltar directamente. */
 }
 
-main {
-  width: 80%;
-  margin: 0 auto;
-  
-}
+
 
 body{
   background-color: black;
@@ -203,6 +199,7 @@ body{
     margin-bottom: 0;
     border-top: 1px solid #87868477;
     
+    
   }
 
   /*logo*/
@@ -236,7 +233,7 @@ body{
   footer h3 {
     font-size: 0.90rem;
     font-weight: 400;
-    border-left:solid #cba135;
+    border-left:solid  #e5a308d6;
     padding-left: 0.90rem;
     padding-bottom: 0.3rem;
   }
@@ -305,7 +302,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid #cba135;
+      border: 1px solid  #e5a308d6;
       border-radius: 50%;
       text-decoration: none;
       transition: .3s;
@@ -322,7 +319,7 @@ body{
 
   footer .bi{
     background-color: black;
-    color: #cba135;
+    color:  #e5a308d6;
     padding: 0.2rem;
     margin: 0;
 
@@ -333,7 +330,7 @@ body{
 
   .footer-whatsapp {
     display: flex;
-    border: solid 1px #cba135;
+    border: solid 1px  #e5a308d6;;
     justify-content: center;
     align-items: center;
     width: 80%;
@@ -348,7 +345,7 @@ body{
 
   .footer-whatsapp div {
     margin-left: 0%;
-    border-left: solid 2px #cba135;;
+    border-left: solid 2px  #e5a308d6;
   }
 
   .footer-whatsapp h3, .footer-whatsapp a{
@@ -413,7 +410,7 @@ body{
   }
 
 .legal-left i, .legal-link i{
-    color: #cba135;
+    color:  #e5a308d6;
     font-size: 1.2rem;
   }
 
@@ -443,7 +440,14 @@ body{
 
   .footer-copy{
     width: 100%;
-    background-color: #333;
+    background: linear-gradient(
+        135deg,
+        #1f1f1f 0%,
+        #3a3a3a 25%,
+        #5a5a5adb 50%,
+        #343434 75%,
+        #1e1e1e 100%
+    );
     border-radius: 0%;
     text-align: center;
     font-size: 0.90rem;
