@@ -22,8 +22,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.6;
-  filter: brightness(100%);
+  opacity: 0.8;
+  filter: brightness(75%);
 }
 
 .hero-section.left {

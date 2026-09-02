@@ -2,61 +2,147 @@
   Preguntas.css - comentarios distribuidos
 ====================================================================================*/
 
+
+
 main hr {
   border: none;
-  height: 1px;
+
   background: rgba(255, 255, 255, 0.06);
   width: 100%;
-  margin: 0.5rem auto;
+  
 }
+
 .Title {
-  /* Bloque de cabecera: título, descripción e imagen.
-     Mobile: columna; en @media se cambia a grid para colocar imagen a la derecha. */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
-  width: 80%;
-  margin: 0 auto;
-  padding: 2rem 0 1.5rem;
+    width: 100%;
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    /* Fondo dorado oscuro */
+    background:
+    linear-gradient(
+              
+              180deg,
+              #8a682f 0%,
+              #5c431d 20%,
+              #533d1c86 40%,
+              #171109 60%,
+              #080706 80%,
+              #000000 100%
+            );
+        
+
+    padding-bottom: 2rem;
 }
 
-.Title h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.15;
+
+/* =========================================
+        LADO IZQUIERDO
+   ========================================= */
+
+.Title .left {
+    width: 100%;
+
+    padding: 3rem 1.5rem 2rem;
+
+    position: relative;
+    z-index: 2;
 }
 
-.Title p {
-  /* Pequeña descripción contextual bajo el título. */
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #d9d9d9;
+
+.Title .left h1 {
+    font-size: 2.3rem;
+
+    margin-bottom: 1rem;
+
+    font-weight: 500;
+    line-height: 1.15;
+
+    color: #f5f1e8;
 }
 
-.Title img {
-  /* Imagen hero del bloque; en desktop se sitúa a la derecha. */
-  width: 100%;
-  max-height: 220px;
-  object-fit: cover;
-  border-radius: 1rem;
+
+.Title .left p {
+    max-width: 100%;
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: white;
+    font-family: "Montserrat", sans-serif;
 }
+
+
+/* =========================================
+        LADO DERECHO
+   ========================================= */
+
+.Title .right {
+    width: 100%;
+    height: 22rem;
+
+    position: relative;
+    z-index: 1;
+
+    /* Imagen fundida verticalmente */
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.35) 10%,
+        black 30%,
+        black 100%
+    );
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.35) 10%,
+        black 30%,
+        black 100%
+    );
+}
+
+
+/* =========================================
+        IMAGEN
+   ========================================= */
+
+.Title .right img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        brightness(0.9)
+        contrast(1.05)
+        saturate(0.9);
+}
+
+
+
+
 
 .Details-question {
   /* Fila que contiene el icono y el elemento `<details>` para una pregunta. */
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  padding: 0.4rem 0;
+  padding: 0.3rem 3rem;
 }
 
 .Details-question > i {
   /* Icono circular a la izquierda de la pregunta. */
   flex-shrink: 0;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,9 +155,10 @@ main hr {
 .Details-question details {
   /* Caja que envuelve el summary y el contenido desplegable. */
   flex: 1;
-  background: #2b2b2b;
+  background: rgba(44, 42, 42, 0.52);
   border-radius: 0.75rem;
   overflow: hidden;
+  font-weight: 700;
 }
 
 .Details-question summary {
@@ -83,9 +170,8 @@ main hr {
   justify-content: space-between;
   gap: 0.5rem;
   padding: 0.85rem 1rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 0.82rem;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 1rem;
 }
 
 .Details-question summary::-webkit-details-marker {
@@ -113,7 +199,8 @@ main hr {
   font-family: "Montserrat", sans-serif;
   font-size: 0.78rem;
   line-height: 1.6;
-  color: #cccccc;
+  color: white;
+  font-weight: 500;
 }
 
 .Class-Ayuda {
@@ -123,10 +210,10 @@ main hr {
   align-items: center;
   gap: 0.5rem;
   text-align: center;
-  border: 1px solid #cba135;
+  border: 1px solid #e5a308d6;
   border-radius: 1rem;
-  padding: 1.5rem 1.25rem;
-  margin: 1.5rem 0 2rem;
+  padding: 1.5rem 2rem;
+  margin: 3rem;
 }
 
 .Class-Ayuda div {
@@ -149,11 +236,11 @@ main hr {
   font-size: 1.2rem;
 }
 
-.Class-Ayuda a {
+.Class-Ayuda p {
   /* Texto de apoyo dentro de la tarjeta. */
   font-family: "Montserrat", sans-serif;
   font-size: 0.82rem;
-  color: #cccccc;
+  color: white;
 }
 
 .Class-Ayuda a:last-of-type {
@@ -161,9 +248,16 @@ main hr {
   background: linear-gradient(135deg, #8d6e2f, #cba135, #f2d27a);
   color: black;
   font-weight: 600;
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1.25rem;
   border-radius: 1.5rem;
   margin-top: 0.25rem;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.82rem;
+}
+
+.Class-Ayuda i {
+  color: #080706;
 }
 
 /* =================================================================================
@@ -171,57 +265,112 @@ main hr {
 ==================================================================================== */
 
 @media screen and (min-width: 576px) {
-  /* Ajustes para desktop pequeño: coloca la imagen a la derecha y
-     mejora tamaños/espaciados para legibilidad. */
-  .Title {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    align-items: center;
-    column-gap: 3rem;
-    padding: 3rem 0;
-  }
+  
+     /*Hero */
 
-  .Title h1 {
-    grid-column: 1;
-    grid-row: 1;
-    font-size: 2.75rem;
-  }
+    .Title {
+        min-height: 32rem;
 
-  .Title p {
-    grid-column: 1;
-    grid-row: 2;
-    align-self: start;
-    font-size: 1rem;
-    max-width: 32rem;
-  }
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 5rem;
+        padding-bottom: 0;
 
-  .Title img {
-    grid-column: 2;
-    grid-row: 1 / 3;
-    max-height: 260px;
-    justify-self: end;
-  }
+        
+
+        /* Dorado izquierda → negro derecha */
+        background:
+            linear-gradient(
+              
+              to right,
+              #8a682f 0%,
+              #5c431d 20%,
+              #533d1c 40%,
+              #171109 60%,
+              #080706 80%,
+              #000000 100%
+            )
+          
+    }
+
+
+    /* =========================
+            TEXTO
+       ========================= */
+
+    .Title .left {
+        width: 50%;
+
+        padding-left: 6%;
+        padding-right: 2rem;
+    }
+
+
+    .Title .left h1 {
+        font-size: 3.2rem;
+    }
+
+
+    .Title .left p {
+        max-width: 550px;
+
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+            IMAGEN
+       ========================= */
+
+    .Title .right {
+    width: 60%;
+    height: 32rem;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.15) 10%,
+        rgba(0, 0, 0, 0.4) 25%,
+        rgba(0, 0, 0, 0.75) 40%,
+        black 55%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.15) 10%,
+        rgba(0, 0, 0, 0.4) 25%,
+        rgba(0, 0, 0, 0.75) 40%,
+        black 55%
+    );
+}
+
+
+  
+ /* Preguntas */
 
   .Details-question {
     gap: 1.25rem;
-    padding: 0.6rem 0;
+    padding: 0.3rem 10rem;
   }
 
   .Details-question > i {
     width: 2.75rem;
     height: 2.75rem;
     font-size: 1.3rem;
+    
   }
 
   .Details-question summary {
     padding: 1.1rem 1.5rem;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
   }
 
   .Details-question details p {
     padding: 0 1.5rem 1.25rem;
     font-size: 0.9rem;
+    
   }
 
   .Class-Ayuda {
@@ -231,7 +380,7 @@ main hr {
     column-gap: 1.5rem;
     text-align: left;
     max-width: 34rem;
-    margin: 2rem auto 3rem;
+    margin: 4rem auto;
     padding: 2rem;
   }
 
@@ -258,4 +407,6 @@ main hr {
     grid-row: 3;
     justify-self: start;
   }
+
 }
+
