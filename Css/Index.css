@@ -23,7 +23,6 @@ main {
   top: 0;
   left: 0;
   opacity: 0.8;
-  filter: brightness(75%);
 }
 
 .hero-section.left {
@@ -49,13 +48,13 @@ main {
 
 .hero-section h3 {
   font-family: "Montserrat", serif;
-  color: #e5a308d6;
+  color: #ab7d07;
   font-size: 1.1rem;
   
 }
 
 .hero-section strong {
-  color: #e5a308d6;
+  color: #ab7d07;
 }
 
 .hero-section hr {
@@ -160,7 +159,7 @@ main {
   font-size: 0.90rem;
   font-weight: 700;
 
-  color: #e5a308d6;
+  color: #ab7d07;
 }
 
 
@@ -210,7 +209,7 @@ main {
 
   letter-spacing: 2px;
 
-  color: #e5a308d6;
+  color: #ab7d07;
 
   margin-bottom: 0.5rem;
 }
@@ -281,7 +280,7 @@ main {
   font-size: 0.69rem;
   letter-spacing: 1px;
 
-  color: #e5a308d6;
+  color: #ab7d07;
 
 }
 
@@ -390,7 +389,7 @@ main {
   background: rgba(181, 152, 84, 0.15);
   border: 1px solid #b59854;
   border-radius: 50%;
-  color: #e5a308d6;
+  color: #ab7d07;
   cursor: pointer;
   padding: 8px;
   transition:
@@ -514,7 +513,7 @@ main {
 
   letter-spacing: 2px;
 
-  color: #e5a308d6;
+  color: #ab7d07;
 }
 
 

@@ -85,6 +85,12 @@ body{
     width: 100%;
     box-sizing: border-box; /* Evita que el padding genere scroll horizontal */
 
+    position: sticky; /*Para que se quede fijo el menu*/
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+
 
   
   }
