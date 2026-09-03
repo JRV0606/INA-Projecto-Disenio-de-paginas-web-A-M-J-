@@ -2,6 +2,11 @@
     ESTILOS BASE (PARA MOBILE Y DESKTOP)  Y CONFIGURACIÓN MOBILE 
 ====================================================================================*/
 
+.Main-content {
+width: 100%;
+}
+
+
 /*Hero*/
 
 .About-Hero {
@@ -104,8 +109,10 @@
 }
 
 .Our-History img {
-  width: 25rem;
+  
   border-radius: 3rem;
+  width: 100%;
+  max-width: 25rem;
   
   
 }
