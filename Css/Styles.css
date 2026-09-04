@@ -72,7 +72,7 @@ body{
 
   /*Configuración general de los íconos*/
   .bi-house-door, .fa-solid, .bi-question-circle, .bi-person, .bi-envelope {
-    color: #e5a308d6;
+    color: #ab7d07;
     font-size: 1.2rem;
   }
 
@@ -167,7 +167,7 @@ body{
 
   /*Contenedor (a) para manejar lo que está dentro el texto. Padre de los textos*/
   .nav-link {
-    color: #e5a308d6;
+    color: #ab7d07;
     text-decoration: none; /*Para quitarle los puntos y raya*/
     font-size: 1rem;
     font-weight: 600;
@@ -181,12 +181,12 @@ body{
   .nav-link:hover {
   /*Cuando se pasa el mouse por los link del nav*/
     background: none;
-    color: #f6deb0;
+    color: #ab7d0789;
     padding-left:12px;
   }
 
   .nav-link:hover i{ /*cuando pasen el mouse por ahi tambien cambie de color los iconos*/
-    color: #f6deb0;
+    color: #ab7d0789;
   }
 
   
@@ -239,7 +239,7 @@ body{
   footer h3 {
     font-size: 0.90rem;
     font-weight: 400;
-    border-left:solid  #e5a308d6;
+    border-left:solid  #ab7d07;
     padding-left: 0.90rem;
     padding-bottom: 0.3rem;
   }
@@ -279,7 +279,7 @@ body{
   .nav-link-footer:hover {
   /*Cuando se pasa el mouse por los link del nav*/
     background: none;
-    color: #f6deb0;
+    color: #ab7d0789;
   }
 
 
@@ -308,7 +308,7 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid  #e5a308d6;
+      border: 1px solid  #ab7d07;
       border-radius: 50%;
       text-decoration: none;
       transition: .3s;
@@ -325,7 +325,7 @@ body{
 
   footer .bi{
     background-color: black;
-    color:  #e5a308d6;
+    color:  #ab7d07;
     padding: 0.2rem;
     margin: 0;
 
@@ -336,7 +336,7 @@ body{
 
   .footer-whatsapp {
     display: flex;
-    border: solid 1px  #e5a308d6;;
+    border: solid 1px #ab7d07;
     justify-content: center;
     align-items: center;
     width: 80%;
@@ -351,7 +351,7 @@ body{
 
   .footer-whatsapp div {
     margin-left: 0%;
-    border-left: solid 2px  #e5a308d6;
+    border-left: solid 2px  #ab7d07;
   }
 
   .footer-whatsapp h3, .footer-whatsapp a{
@@ -363,7 +363,7 @@ body{
   }
 
   .footer-whatsapp a:hover {
-    color: #cba135;
+    color: #ab7d0789;
   }
   
 
@@ -416,7 +416,7 @@ body{
   }
 
 .legal-left i, .legal-link i{
-    color:  #e5a308d6;
+    color:  #ab7d07;
     font-size: 1.2rem;
   }
 
@@ -430,7 +430,7 @@ body{
   }
 
 .legal-link:hover{
-    color: #cba135;
+    color: #ab7d0789;
   }
 
 .legal-link:hover .bi-chevron-right{
