@@ -213,14 +213,14 @@ width: 100%;
 }
 
 .pillar i {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding-bottom: 1rem;
   color: white;
 }
 
 .pillar-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: white;
   padding-bottom: 1rem;
@@ -369,13 +369,12 @@ width: 100%;
     max-width: 300px;
   }
  
-  .pillar-icon {
-    width: 52px;
-    height: 52px;
+  .pillar i {
+    font-size: 2rem;
   }
  
   .pillar-title {
-    font-size: 1.05rem;
+    font-size: 1.8rem;
   }
  
   .pillar-description {
